@@ -1,0 +1,437 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file fpga_dsp_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c2000.nph' in environment: F:/software/3_11_Diamond_x64/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 07 16:05:28 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o FPGA_DSP_Impl1.tw1 -gui -msgset C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/promote.xml FPGA_DSP_Impl1_map.ncd FPGA_DSP_Impl1.prf 
+Design file:     fpga_dsp_impl1_map.ncd
+Preference file: fpga_dsp_impl1.prf
+Device,speed:    LCMXO2-2000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<FONT COLOR=red><LI><A href='#map_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "clk_in_c" 36.198000 MHz (4096 errors)</FONT></A></LI>
+</FONT>            4096 items scored, 4096 timing errors detected.
+Warning:  19.734MHz is the maximum frequency for this preference.
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 23.048ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              50.508ns  (31.7% logic, 68.3% route), 32 logic levels.
+
+ Constraint Details:
+
+     50.508ns physical path delay SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 23.048ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 */SLICE_22.CLK to *M/SLICE_22.Q0 SMART_ABS/RS485_COM_M/SLICE_22 (from clk_in_c)
+ROUTE        11   e 1.234 *M/SLICE_22.Q0 to */SLICE_262.B0 SMART_ABS/RS485_COM_M/time_interval_reg_9
+CTOF_DEL    ---     0.495 */SLICE_262.B0 to */SLICE_262.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3   e 1.234 */SLICE_262.F0 to */SLICE_340.B0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495 */SLICE_340.B0 to */SLICE_340.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3   e 1.234 */SLICE_340.F0 to */SLICE_311.B1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495 */SLICE_311.B1 to */SLICE_311.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2   e 0.480 */SLICE_311.F1 to */SLICE_311.B0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495 */SLICE_311.B0 to */SLICE_311.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1   e 1.234 */SLICE_311.F0 to */SLICE_293.A1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495 */SLICE_293.A1 to */SLICE_293.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3   e 1.234 */SLICE_293.F1 to */SLICE_227.D1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495 */SLICE_227.D1 to */SLICE_227.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4   e 1.234 */SLICE_227.F1 to   SLICE_337.B1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495   SLICE_337.B1 to   SLICE_337.F1 SLICE_337
+ROUTE         2   e 1.234   SLICE_337.F1 to */SLICE_263.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495 */SLICE_263.D0 to */SLICE_263.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1   e 1.234 */SLICE_263.F0 to */SLICE_294.C0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495 */SLICE_294.C0 to */SLICE_294.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2   e 1.234 */SLICE_294.F0 to */SLICE_227.A0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495 */SLICE_227.A0 to */SLICE_227.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8   e 1.234 */SLICE_227.F0 to */SLICE_272.B0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495 */SLICE_272.B0 to */SLICE_272.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1   e 1.234 */SLICE_272.F0 to */SLICE_308.C1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495 */SLICE_308.C1 to */SLICE_308.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1   e 1.234 */SLICE_308.F1 to */SLICE_226.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495 */SLICE_226.D1 to */SLICE_226.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9   e 1.234 */SLICE_226.F1 to */SLICE_270.B1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495 */SLICE_270.B1 to */SLICE_270.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2   e 0.480 */SLICE_270.F1 to */SLICE_270.B0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495 */SLICE_270.B0 to */SLICE_270.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1   e 1.234 */SLICE_270.F0 to */SLICE_226.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495 */SLICE_226.C0 to */SLICE_226.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9   e 1.234 */SLICE_226.F0 to */SLICE_278.B1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495 */SLICE_278.B1 to */SLICE_278.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1   e 0.480 */SLICE_278.F1 to */SLICE_278.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495 */SLICE_278.C0 to */SLICE_278.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1   e 1.234 */SLICE_278.F0 to */SLICE_290.A1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495 */SLICE_290.A1 to */SLICE_290.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4   e 1.234 */SLICE_290.F1 to */SLICE_225.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495 */SLICE_225.C1 to */SLICE_225.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8   e 1.234 */SLICE_225.F1 to */SLICE_275.B0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495 */SLICE_275.B0 to */SLICE_275.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2   e 1.234 */SLICE_275.F0 to */SLICE_251.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721 */SLICE_251.B1 to *LICE_251.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1   e 1.234 *LICE_251.OFX0 to */SLICE_295.C1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495 */SLICE_295.C1 to */SLICE_295.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4   e 1.234 */SLICE_295.F1 to */SLICE_225.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495 */SLICE_225.D0 to */SLICE_225.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5   e 1.234 */SLICE_225.F0 to */SLICE_267.B0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495 */SLICE_267.B0 to */SLICE_267.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3   e 0.480 */SLICE_267.F0 to */SLICE_267.B1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495 */SLICE_267.B1 to */SLICE_267.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1   e 1.234 */SLICE_267.F1 to */SLICE_275.C1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495 */SLICE_275.C1 to */SLICE_275.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1   e 1.234 */SLICE_275.F1 to */SLICE_224.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495 */SLICE_224.D1 to */SLICE_224.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4   e 1.234 */SLICE_224.F1 to */SLICE_276.B0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495 */SLICE_276.B0 to */SLICE_276.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1   e 0.480 */SLICE_276.F0 to */SLICE_276.D1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495 */SLICE_276.D1 to */SLICE_276.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1   e 1.234 */SLICE_276.F1 to */SLICE_224.C0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495 */SLICE_224.C0 to */SLICE_224.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1   e 0.001 */SLICE_224.F0 to *SLICE_224.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   50.508   (31.7% logic, 68.3% route), 32 logic levels.
+
+Warning:  19.734MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 36.198000 MHz  |             |             |
+;                                       |   36.198 MHz|   19.734 MHz|  32 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+SMART_ABS/RS485_COM_M/n7076             |       8|    4096|    100.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6512             |       2|    4096|    100.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n8                |       1|    4096|    100.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7074             |       5|    4096|    100.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6509             |       4|    4096|    100.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n2824             |       8|    4092|     99.90%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n8_adj_1042       |       1|    4088|     99.80%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6_adj_1026       |       1|    4088|     99.80%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n5892             |       4|    4088|     99.80%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6506             |       3|    4072|     99.41%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7085             |       4|    4072|     99.41%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6500             |       4|    4064|     99.22%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n384              |       1|    4064|     99.22%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n8_adj_1041       |       1|    4060|     99.12%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7083             |       9|    4036|     98.54%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6787             |       1|    4032|     98.44%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n5868             |       9|    3944|     96.29%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6_adj_1045       |       1|    3922|     95.75%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n8_adj_1022       |       1|    3803|     92.85%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6953             |       1|    3370|     82.28%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6                |       2|    3156|     77.05%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n2419             |       1|    2893|     70.63%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7377             |       2|    2889|     70.53%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n4_adj_1025       |       3|    2770|     67.63%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n4_adj_1040       |       1|    2624|     64.06%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7079             |       1|    2606|     63.62%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7378             |       2|    2473|     60.38%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6097             |       1|    2470|     60.30%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n253              |       7|    2184|     53.32%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6093             |       1|    1562|     38.13%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7091             |       5|    1532|     37.40%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7382             |       3|    1391|     33.96%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7090             |       2|    1268|     30.96%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n1378             |       1|    1086|     26.51%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+13                                      |       8|    1024|     25.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n6497             |       3|     983|     24.00%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+11                                      |       7|     932|     22.75%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+12                                      |       6|     899|     21.95%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n5856             |       5|     802|     19.58%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+10                                      |      10|     763|     18.63%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/n7_adj_1030       |       1|     636|     15.53%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+9                                       |      11|     453|     11.06%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 221
+   Covered under: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 76464319
+Cumulative negative slack: 76464319
+
+Constraints cover 2819706 paths, 1 nets, and 2131 connections (76.63% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 07 16:05:29 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o FPGA_DSP_Impl1.tw1 -gui -msgset C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/promote.xml FPGA_DSP_Impl1_map.ncd FPGA_DSP_Impl1.prf 
+Design file:     fpga_dsp_impl1_map.ncd
+Preference file: fpga_dsp_impl1.prf
+Device,speed:    LCMXO2-2000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "clk_in_c" 36.198000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i64  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i63  (to clk_in_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_129 to SLICE_129 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_129 to SLICE_129:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_129.CLK to   SLICE_129.Q1 SLICE_129 (from clk_in_c)
+ROUTE         3   e 0.199   SLICE_129.Q1 to   SLICE_129.M0 SMART_ABS/RS485_COM_M/rx_data_reg_71 (to clk_in_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 36.198000 MHz  |             |             |
+;                                       |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 221
+   Covered under: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2819706 paths, 1 nets, and 2347 connections (84.39% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 76464319 (setup), 0 (hold)
+Cumulative negative slack: 76464319 (76464319+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

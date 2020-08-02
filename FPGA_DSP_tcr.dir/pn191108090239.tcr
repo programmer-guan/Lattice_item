@@ -1,0 +1,9 @@
+#Start recording tcl command: 11/8/2019 08:55:46
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/FPGA_DSP.ldf"
+rvl_project open C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/Reveal.rvl
+rvl_project save -overwrite C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/Reveal.rvl
+rvl_project close -force
+prj_dev set -part LCMXO2-640HC-4TG100C
+prj_run Export -impl Impl1
+#Stop recording: 11/8/2019 09:02:39

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="FPGA_DSP" device="LCMXO2-2000HC-4TG100C" default_implementation="Impl1">
+    <Options/>
+    <Implementation title="Impl1" dir="Impl1" description="Impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="top" top="top"/>
+        <Source name="src/top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top"/>
+        </Source>
+        <Source name="src/key_check.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/smg_scan.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/smart_abs.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/rs485_com.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/encoder_check.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/out_pulse_check.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/abz_phase.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/crc_8.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/dsp_com.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="FPGA_DSP.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="Impl1/Impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="FPGA_DSP1.sty"/>
+</BaliProject>

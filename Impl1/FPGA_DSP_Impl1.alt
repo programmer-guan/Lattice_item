@@ -1,0 +1,63 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Jan 07 16:06:29 2020 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LCMXO2-2000HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS BUS_D[5] : 65 : inout *
+NOTE PINS BUS_D[6] : 66 : inout *
+NOTE PINS BUS_D[7] : 67 : inout *
+NOTE PINS BUS_D[4] : 64 : inout *
+NOTE PINS BUS_D[3] : 63 : inout *
+NOTE PINS BUS_D[2] : 62 : inout *
+NOTE PINS BUS_D[1] : 60 : inout *
+NOTE PINS BUS_D[0] : 75 : inout *
+NOTE PINS DEBUG_LED : 96 : out *
+NOTE PINS SMG_LED[12] : 8 : out *
+NOTE PINS SMG_LED[11] : 7 : out *
+NOTE PINS SMG_LED[10] : 4 : out *
+NOTE PINS SMG_LED[9] : 3 : out *
+NOTE PINS SMG_LED[8] : 2 : out *
+NOTE PINS SMG_LED[7] : 17 : out *
+NOTE PINS SMG_LED[6] : 16 : out *
+NOTE PINS SMG_LED[5] : 15 : out *
+NOTE PINS SMG_LED[4] : 14 : out *
+NOTE PINS SMG_LED[3] : 13 : out *
+NOTE PINS SMG_LED[2] : 12 : out *
+NOTE PINS SMG_LED[1] : 10 : out *
+NOTE PINS SMG_LED[0] : 9 : out *
+NOTE PINS DO1 : 32 : out *
+NOTE PINS DO2 : 34 : out *
+NOTE PINS DO3 : 35 : out *
+NOTE PINS DO4 : 36 : out *
+NOTE PINS UART_TX : 40 : out *
+NOTE PINS TR_DIR : 41 : out *
+NOTE PINS A_PHASE : 37 : out *
+NOTE PINS B_PHASE : 38 : out *
+NOTE PINS Z_PHASE : 39 : out *
+NOTE PINS clk_in : 86 : in *
+NOTE PINS rst_n_in : 99 : in *
+NOTE PINS BUS_WE : 68 : in *
+NOTE PINS BUS_CS : 69 : in *
+NOTE PINS BUS_A[4] : 74 : in *
+NOTE PINS BUS_A[3] : 71 : in *
+NOTE PINS BUS_A[2] : 70 : in *
+NOTE PINS BUS_A[1] : 52 : in *
+NOTE PINS BUS_A[0] : 51 : in *
+NOTE PINS ENC_U : 47 : in *
+NOTE PINS ENC_V : 48 : in *
+NOTE PINS UVW : 45 : in *
+NOTE PINS ABZ : 43 : in *
+NOTE PINS DI1 : 28 : in *
+NOTE PINS DI2 : 27 : in *
+NOTE PINS DI3 : 25 : in *
+NOTE PINS DI4 : 29 : in *
+NOTE PINS K_MODE : 21 : in *
+NOTE PINS K_UP : 20 : in *
+NOTE PINS K_DOWN : 19 : in *
+NOTE PINS K_SET : 18 : in *
+NOTE PINS TMR_CLK : 30 : in *
+NOTE PINS TMR_DIR : 31 : in *
+NOTE PINS UART_RX : 42 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

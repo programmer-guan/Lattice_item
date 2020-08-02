@@ -1,0 +1,1793 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file fpga_dsp_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c2000.nph' in environment: F:/software/3_11_Diamond_x64/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 07 16:05:49 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o FPGA_DSP_Impl1.twr -gui -msgset C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/promote.xml FPGA_DSP_Impl1.ncd FPGA_DSP_Impl1.prf 
+Design file:     fpga_dsp_impl1.ncd
+Preference file: fpga_dsp_impl1.prf
+Device,speed:    LCMXO2-2000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<FONT COLOR=red><LI><A href='#par_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "clk_in_c" 36.198000 MHz (4096 errors)</FONT></A></LI>
+</FONT>            4096 items scored, 4096 timing errors detected.
+Warning:  26.440MHz is the maximum frequency for this preference.
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 10.196ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i13  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.656ns  (42.6% logic, 57.4% route), 32 logic levels.
+
+ Constraint Details:
+
+     37.656ns physical path delay SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 10.196ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19D.CLK to     R12C19D.Q0 SMART_ABS/RS485_COM_M/SLICE_34 (from clk_in_c)
+ROUTE         8     1.216     R12C19D.Q0 to     R12C20D.C0 SMART_ABS/RS485_COM_M/time_interval_reg_13
+CTOF_DEL    ---     0.495     R12C20D.C0 to     R12C20D.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3     0.662     R12C20D.F0 to     R12C21C.D0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495     R12C21C.D0 to     R12C21C.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3     0.332     R12C21C.F0 to     R12C21D.D1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495     R12C21D.D1 to     R12C21D.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2     0.445     R12C21D.F1 to     R12C21D.C0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495     R12C21D.C0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.656   (42.6% logic, 57.4% route), 32 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 10.148ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i13  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.608ns  (41.3% logic, 58.7% route), 31 logic levels.
+
+ Constraint Details:
+
+     37.608ns physical path delay SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 10.148ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19D.CLK to     R12C19D.Q0 SMART_ABS/RS485_COM_M/SLICE_34 (from clk_in_c)
+ROUTE         8     1.216     R12C19D.Q0 to     R12C20B.C1 SMART_ABS/RS485_COM_M/time_interval_reg_13
+CTOF_DEL    ---     0.495     R12C20B.C1 to     R12C20B.F1 SLICE_261
+ROUTE         7     1.000     R12C20B.F1 to     R12C20D.A1 SMART_ABS/RS485_COM_M/n253
+CTOF_DEL    ---     0.495     R12C20D.A1 to     R12C20D.F1 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         5     0.659     R12C20D.F1 to     R12C20A.D1 SMART_ABS/RS485_COM_M/n7091
+CTOF_DEL    ---     0.495     R12C20A.D1 to     R12C20A.F1 SMART_ABS/RS485_COM_M/SLICE_268
+ROUTE         1     1.299     R12C20A.F1 to     R13C19B.A1 SMART_ABS/RS485_COM_M/n1378
+CTOF_DEL    ---     0.495     R13C19B.A1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.608   (41.3% logic, 58.7% route), 31 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 10.059ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.519ns  (42.7% logic, 57.3% route), 32 logic levels.
+
+ Constraint Details:
+
+     37.519ns physical path delay SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 10.059ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19B.CLK to     R12C19B.Q0 SMART_ABS/RS485_COM_M/SLICE_22 (from clk_in_c)
+ROUTE        11     1.079     R12C19B.Q0 to     R12C20D.B0 SMART_ABS/RS485_COM_M/time_interval_reg_9
+CTOF_DEL    ---     0.495     R12C20D.B0 to     R12C20D.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3     0.662     R12C20D.F0 to     R12C21C.D0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495     R12C21C.D0 to     R12C21C.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3     0.332     R12C21C.F0 to     R12C21D.D1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495     R12C21D.D1 to     R12C21D.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2     0.445     R12C21D.F1 to     R12C21D.C0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495     R12C21D.C0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.519   (42.7% logic, 57.3% route), 32 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19B.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 10.006ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i13  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.466ns  (42.8% logic, 57.2% route), 32 logic levels.
+
+ Constraint Details:
+
+     37.466ns physical path delay SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 10.006ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19D.CLK to     R12C19D.Q0 SMART_ABS/RS485_COM_M/SLICE_34 (from clk_in_c)
+ROUTE         8     1.216     R12C19D.Q0 to     R12C20D.C0 SMART_ABS/RS485_COM_M/time_interval_reg_13
+CTOF_DEL    ---     0.495     R12C20D.C0 to     R12C20D.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3     0.662     R12C20D.F0 to     R12C21C.D0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495     R12C21C.D0 to     R12C21C.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3     0.332     R12C21C.F0 to     R12C21D.D1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495     R12C21D.D1 to     R12C21D.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2     0.445     R12C21D.F1 to     R12C21D.C0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495     R12C21D.C0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21D.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21D.D0 to     R13C21D.F0 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     0.436     R13C21D.F0 to     R13C21D.C1 SMART_ABS/RS485_COM_M/n6093
+CTOF_DEL    ---     0.495     R13C21D.C1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.466   (42.8% logic, 57.2% route), 32 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.999ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i10  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.459ns  (41.5% logic, 58.5% route), 31 logic levels.
+
+ Constraint Details:
+
+     37.459ns physical path delay SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.999ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19B.CLK to     R12C19B.Q1 SMART_ABS/RS485_COM_M/SLICE_22 (from clk_in_c)
+ROUTE        10     1.067     R12C19B.Q1 to     R12C20B.B1 SMART_ABS/RS485_COM_M/time_interval_reg_10
+CTOF_DEL    ---     0.495     R12C20B.B1 to     R12C20B.F1 SLICE_261
+ROUTE         7     1.000     R12C20B.F1 to     R12C20D.A1 SMART_ABS/RS485_COM_M/n253
+CTOF_DEL    ---     0.495     R12C20D.A1 to     R12C20D.F1 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         5     0.659     R12C20D.F1 to     R12C20A.D1 SMART_ABS/RS485_COM_M/n7091
+CTOF_DEL    ---     0.495     R12C20A.D1 to     R12C20A.F1 SMART_ABS/RS485_COM_M/SLICE_268
+ROUTE         1     1.299     R12C20A.F1 to     R13C19B.A1 SMART_ABS/RS485_COM_M/n1378
+CTOF_DEL    ---     0.495     R13C19B.A1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.459   (41.5% logic, 58.5% route), 31 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19B.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.998ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i12  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.458ns  (42.8% logic, 57.2% route), 32 logic levels.
+
+ Constraint Details:
+
+     37.458ns physical path delay SMART_ABS/RS485_COM_M/SLICE_33 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.998ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_33 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19C.CLK to     R12C19C.Q1 SMART_ABS/RS485_COM_M/SLICE_33 (from clk_in_c)
+ROUTE         6     1.018     R12C19C.Q1 to     R12C20D.A0 SMART_ABS/RS485_COM_M/time_interval_reg_12
+CTOF_DEL    ---     0.495     R12C20D.A0 to     R12C20D.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3     0.662     R12C20D.F0 to     R12C21C.D0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495     R12C21C.D0 to     R12C21C.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3     0.332     R12C21C.F0 to     R12C21D.D1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495     R12C21D.D1 to     R12C21D.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2     0.445     R12C21D.F1 to     R12C21D.C0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495     R12C21D.C0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.458   (42.8% logic, 57.2% route), 32 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19C.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.958ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i13  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.418ns  (41.5% logic, 58.5% route), 31 logic levels.
+
+ Constraint Details:
+
+     37.418ns physical path delay SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.958ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19D.CLK to     R12C19D.Q0 SMART_ABS/RS485_COM_M/SLICE_34 (from clk_in_c)
+ROUTE         8     1.216     R12C19D.Q0 to     R12C20B.C1 SMART_ABS/RS485_COM_M/time_interval_reg_13
+CTOF_DEL    ---     0.495     R12C20B.C1 to     R12C20B.F1 SLICE_261
+ROUTE         7     1.000     R12C20B.F1 to     R12C20D.A1 SMART_ABS/RS485_COM_M/n253
+CTOF_DEL    ---     0.495     R12C20D.A1 to     R12C20D.F1 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         5     0.659     R12C20D.F1 to     R12C20A.D1 SMART_ABS/RS485_COM_M/n7091
+CTOF_DEL    ---     0.495     R12C20A.D1 to     R12C20A.F1 SMART_ABS/RS485_COM_M/SLICE_268
+ROUTE         1     1.299     R12C20A.F1 to     R13C19B.A1 SMART_ABS/RS485_COM_M/n1378
+CTOF_DEL    ---     0.495     R13C19B.A1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21D.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21D.D0 to     R13C21D.F0 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     0.436     R13C21D.F0 to     R13C21D.C1 SMART_ABS/RS485_COM_M/n6093
+CTOF_DEL    ---     0.495     R13C21D.C1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.418   (41.5% logic, 58.5% route), 31 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.950ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i12  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.410ns  (41.5% logic, 58.5% route), 31 logic levels.
+
+ Constraint Details:
+
+     37.410ns physical path delay SMART_ABS/RS485_COM_M/SLICE_33 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.950ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_33 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19C.CLK to     R12C19C.Q1 SMART_ABS/RS485_COM_M/SLICE_33 (from clk_in_c)
+ROUTE         6     1.018     R12C19C.Q1 to     R12C20B.A1 SMART_ABS/RS485_COM_M/time_interval_reg_12
+CTOF_DEL    ---     0.495     R12C20B.A1 to     R12C20B.F1 SLICE_261
+ROUTE         7     1.000     R12C20B.F1 to     R12C20D.A1 SMART_ABS/RS485_COM_M/n253
+CTOF_DEL    ---     0.495     R12C20D.A1 to     R12C20D.F1 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         5     0.659     R12C20D.F1 to     R12C20A.D1 SMART_ABS/RS485_COM_M/n7091
+CTOF_DEL    ---     0.495     R12C20A.D1 to     R12C20A.F1 SMART_ABS/RS485_COM_M/SLICE_268
+ROUTE         1     1.299     R12C20A.F1 to     R13C19B.A1 SMART_ABS/RS485_COM_M/n1378
+CTOF_DEL    ---     0.495     R13C19B.A1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.410   (41.5% logic, 58.5% route), 31 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19C.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.940ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i13  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.400ns  (41.5% logic, 58.5% route), 31 logic levels.
+
+ Constraint Details:
+
+     37.400ns physical path delay SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.940ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_34 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19D.CLK to     R12C19D.Q0 SMART_ABS/RS485_COM_M/SLICE_34 (from clk_in_c)
+ROUTE         8     1.216     R12C19D.Q0 to     R12C20B.C1 SMART_ABS/RS485_COM_M/time_interval_reg_13
+CTOF_DEL    ---     0.495     R12C20B.C1 to     R12C20B.F1 SLICE_261
+ROUTE         7     1.000     R12C20B.F1 to     R12C20D.A1 SMART_ABS/RS485_COM_M/n253
+CTOF_DEL    ---     0.495     R12C20D.A1 to     R12C20D.F1 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         5     0.678     R12C20D.F1 to     R12C21D.D0 SMART_ABS/RS485_COM_M/n7091
+CTOF_DEL    ---     0.495     R12C21D.D0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21A.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21A.D0 to     R13C21A.F0 SMART_ABS/RS485_COM_M/SLICE_272
+ROUTE         1     0.626     R13C21A.F0 to     R13C21D.D1 SMART_ABS/RS485_COM_M/n6097
+CTOF_DEL    ---     0.495     R13C21D.D1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.400   (41.5% logic, 58.5% route), 31 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 9.869ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:              37.329ns  (42.9% logic, 57.1% route), 32 logic levels.
+
+ Constraint Details:
+
+     37.329ns physical path delay SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224 exceeds
+     27.626ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 27.460ns) by 9.869ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_22 to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    R12C19B.CLK to     R12C19B.Q0 SMART_ABS/RS485_COM_M/SLICE_22 (from clk_in_c)
+ROUTE        11     1.079     R12C19B.Q0 to     R12C20D.B0 SMART_ABS/RS485_COM_M/time_interval_reg_9
+CTOF_DEL    ---     0.495     R12C20D.B0 to     R12C20D.F0 SMART_ABS/RS485_COM_M/SLICE_262
+ROUTE         3     0.662     R12C20D.F0 to     R12C21C.D0 SMART_ABS/RS485_COM_M/n7382
+CTOF_DEL    ---     0.495     R12C21C.D0 to     R12C21C.F0 SMART_ABS/RS485_COM_M/SLICE_340
+ROUTE         3     0.332     R12C21C.F0 to     R12C21D.D1 SMART_ABS/RS485_COM_M/n6497
+CTOF_DEL    ---     0.495     R12C21D.D1 to     R12C21D.F1 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         2     0.445     R12C21D.F1 to     R12C21D.C0 SMART_ABS/RS485_COM_M/n7090
+CTOF_DEL    ---     0.495     R12C21D.C0 to     R12C21D.F0 SMART_ABS/RS485_COM_M/SLICE_311
+ROUTE         1     1.072     R12C21D.F0 to     R13C19B.D1 SMART_ABS/RS485_COM_M/n2419
+CTOF_DEL    ---     0.495     R13C19B.D1 to     R13C19B.F1 SMART_ABS/RS485_COM_M/SLICE_293
+ROUTE         3     0.453     R13C19B.F1 to     R13C19D.C1 SMART_ABS/RS485_COM_M/n6506
+CTOF_DEL    ---     0.495     R13C19D.C1 to     R13C19D.F1 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         4     0.340     R13C19D.F1 to     R13C19C.D1 SMART_ABS/RS485_COM_M/n7085
+CTOF_DEL    ---     0.495     R13C19C.D1 to     R13C19C.F1 SLICE_337
+ROUTE         2     0.972     R13C19C.F1 to     R12C20C.D0 SMART_ABS/RS485_COM_M/n6
+CTOF_DEL    ---     0.495     R12C20C.D0 to     R12C20C.F0 SMART_ABS/RS485_COM_M/SLICE_263
+ROUTE         1     0.623     R12C20C.F0 to     R13C20C.D0 SMART_ABS/RS485_COM_M/n8
+CTOF_DEL    ---     0.495     R13C20C.D0 to     R13C20C.F0 SMART_ABS/RS485_COM_M/SLICE_294
+ROUTE         2     0.637     R13C20C.F0 to     R13C19D.D0 SMART_ABS/RS485_COM_M/n6512
+CTOF_DEL    ---     0.495     R13C19D.D0 to     R13C19D.F0 SMART_ABS/RS485_COM_M/SLICE_227
+ROUTE         8     0.693     R13C19D.F0 to     R13C21D.D0 SMART_ABS/RS485_COM_M/n2824
+CTOF_DEL    ---     0.495     R13C21D.D0 to     R13C21D.F0 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     0.436     R13C21D.F0 to     R13C21D.C1 SMART_ABS/RS485_COM_M/n6093
+CTOF_DEL    ---     0.495     R13C21D.C1 to     R13C21D.F1 SMART_ABS/RS485_COM_M/SLICE_308
+ROUTE         1     1.072     R13C21D.F1 to     R11C19A.D1 SMART_ABS/RS485_COM_M/n6787
+CTOF_DEL    ---     0.495     R11C19A.D1 to     R11C19A.F1 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.690     R11C19A.F1 to     R11C19D.D1 SMART_ABS/RS485_COM_M/n7083
+CTOF_DEL    ---     0.495     R11C19D.D1 to     R11C19D.F1 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         2     0.445     R11C19D.F1 to     R11C19D.C0 SMART_ABS/RS485_COM_M/n7378
+CTOF_DEL    ---     0.495     R11C19D.C0 to     R11C19D.F0 SMART_ABS/RS485_COM_M/SLICE_270
+ROUTE         1     0.747     R11C19D.F0 to     R11C19A.C0 SMART_ABS/RS485_COM_M/n8_adj_1022
+CTOF_DEL    ---     0.495     R11C19A.C0 to     R11C19A.F0 SMART_ABS/RS485_COM_M/SLICE_226
+ROUTE         9     0.799     R11C19A.F0 to     R11C17B.C1 SMART_ABS/RS485_COM_M/n5868
+CTOF_DEL    ---     0.495     R11C17B.C1 to     R11C17B.F1 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.436     R11C17B.F1 to     R11C17B.C0 SMART_ABS/RS485_COM_M/n7079
+CTOF_DEL    ---     0.495     R11C17B.C0 to     R11C17B.F0 SMART_ABS/RS485_COM_M/SLICE_278
+ROUTE         1     0.645     R11C17B.F0 to     R13C17A.D1 SMART_ABS/RS485_COM_M/n8_adj_1041
+CTOF_DEL    ---     0.495     R13C17A.D1 to     R13C17A.F1 SMART_ABS/RS485_COM_M/SLICE_290
+ROUTE         4     1.103     R13C17A.F1 to     R13C20D.C1 SMART_ABS/RS485_COM_M/n6500
+CTOF_DEL    ---     0.495     R13C20D.C1 to     R13C20D.F1 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         8     0.780     R13C20D.F1 to     R13C20B.C0 SMART_ABS/RS485_COM_M/n7076
+CTOF_DEL    ---     0.495     R13C20B.C0 to     R13C20B.F0 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         2     1.032     R13C20B.F0 to     R13C22B.B1 SMART_ABS/RS485_COM_M/n7377
+CTOOFX_DEL  ---     0.721     R13C22B.B1 to   R13C22B.OFX0 SMART_ABS/RS485_COM_M/i6313/SLICE_251
+ROUTE         1     0.623   R13C22B.OFX0 to     R13C21B.D1 SMART_ABS/RS485_COM_M/n6953
+CTOF_DEL    ---     0.495     R13C21B.D1 to     R13C21B.F1 SMART_ABS/RS485_COM_M/SLICE_295
+ROUTE         4     0.654     R13C21B.F1 to     R13C20D.D0 SMART_ABS/RS485_COM_M/n6509
+CTOF_DEL    ---     0.495     R13C20D.D0 to     R13C20D.F0 SMART_ABS/RS485_COM_M/SLICE_225
+ROUTE         5     0.658     R13C20D.F0 to     R13C20A.D0 SMART_ABS/RS485_COM_M/n7074
+CTOF_DEL    ---     0.495     R13C20A.D0 to     R13C20A.F0 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         3     0.665     R13C20A.F0 to     R13C20A.A1 SMART_ABS/RS485_COM_M/n4_adj_1025
+CTOF_DEL    ---     0.495     R13C20A.A1 to     R13C20A.F1 SMART_ABS/RS485_COM_M/SLICE_267
+ROUTE         1     0.315     R13C20A.F1 to     R13C20B.D1 SMART_ABS/RS485_COM_M/n8_adj_1042
+CTOF_DEL    ---     0.495     R13C20B.D1 to     R13C20B.F1 SMART_ABS/RS485_COM_M/SLICE_275
+ROUTE         1     0.958     R13C20B.F1 to     R13C23D.D1 SMART_ABS/RS485_COM_M/n6_adj_1026
+CTOF_DEL    ---     0.495     R13C23D.D1 to     R13C23D.F1 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         4     0.658     R13C23D.F1 to     R13C23A.D0 SMART_ABS/RS485_COM_M/n5892
+CTOF_DEL    ---     0.495     R13C23A.D0 to     R13C23A.F0 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.656     R13C23A.F0 to     R13C23A.A1 SMART_ABS/RS485_COM_M/n4_adj_1040
+CTOF_DEL    ---     0.495     R13C23A.A1 to     R13C23A.F1 SMART_ABS/RS485_COM_M/SLICE_276
+ROUTE         1     0.626     R13C23A.F1 to     R13C23D.D0 SMART_ABS/RS485_COM_M/n6_adj_1045
+CTOF_DEL    ---     0.495     R13C23D.D0 to     R13C23D.F0 SMART_ABS/RS485_COM_M/SLICE_224
+ROUTE         1     0.000     R13C23D.F0 to    R13C23D.DI0 SMART_ABS/RS485_COM_M/n384 (to clk_in_c)
+                  --------
+                   37.329   (42.9% logic, 57.1% route), 32 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R12C19B.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_224:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     2.379       86.PADDI to    R13C23D.CLK clk_in_c
+                  --------
+                    2.379   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning:  26.440MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 36.198000 MHz  |             |             |
+;                                       |   36.198 MHz|   26.440 MHz|  32 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7076">SMART_ABS/RS485_COM_M/n7076</a>             |       8|    4096|    100.00%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n8_adj_1042">SMART_ABS/RS485_COM_M/n8_adj_1042</a>       |       1|    4094|     99.95%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6_adj_1026">SMART_ABS/RS485_COM_M/n6_adj_1026</a>       |       1|    4094|     99.95%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n5892">SMART_ABS/RS485_COM_M/n5892</a>             |       4|    4094|     99.95%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6512">SMART_ABS/RS485_COM_M/n6512</a>             |       2|    4086|     99.76%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n8">SMART_ABS/RS485_COM_M/n8</a>                |       1|    4086|     99.76%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6509">SMART_ABS/RS485_COM_M/n6509</a>             |       4|    4084|     99.71%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7074">SMART_ABS/RS485_COM_M/n7074</a>             |       5|    4082|     99.66%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n8_adj_1041">SMART_ABS/RS485_COM_M/n8_adj_1041</a>       |       1|    4081|     99.63%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6500">SMART_ABS/RS485_COM_M/n6500</a>             |       4|    4081|     99.63%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n384">SMART_ABS/RS485_COM_M/n384</a>              |       1|    4078|     99.56%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n2824">SMART_ABS/RS485_COM_M/n2824</a>             |       8|    4066|     99.27%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7085">SMART_ABS/RS485_COM_M/n7085</a>             |       4|    4038|     98.58%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6506">SMART_ABS/RS485_COM_M/n6506</a>             |       3|    4037|     98.56%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7083">SMART_ABS/RS485_COM_M/n7083</a>             |       9|    4000|     97.66%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6787">SMART_ABS/RS485_COM_M/n6787</a>             |       1|    3980|     97.17%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6_adj_1045">SMART_ABS/RS485_COM_M/n6_adj_1045</a>       |       1|    3915|     95.58%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n5868">SMART_ABS/RS485_COM_M/n5868</a>             |       9|    3895|     95.09%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6953">SMART_ABS/RS485_COM_M/n6953</a>             |       1|    3681|     89.87%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n8_adj_1022">SMART_ABS/RS485_COM_M/n8_adj_1022</a>       |       1|    3627|     88.55%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n4_adj_1025">SMART_ABS/RS485_COM_M/n4_adj_1025</a>       |       3|    3129|     76.39%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7377">SMART_ABS/RS485_COM_M/n7377</a>             |       2|    3062|     74.76%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n4_adj_1040">SMART_ABS/RS485_COM_M/n4_adj_1040</a>       |       1|    2962|     72.31%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6">SMART_ABS/RS485_COM_M/n6</a>                |       2|    2734|     66.75%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n2419">SMART_ABS/RS485_COM_M/n2419</a>             |       1|    2665|     65.06%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7079">SMART_ABS/RS485_COM_M/n7079</a>             |       1|    2592|     63.28%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7378">SMART_ABS/RS485_COM_M/n7378</a>             |       2|    2467|     60.23%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n253">SMART_ABS/RS485_COM_M/n253</a>              |       7|    2423|     59.16%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6097">SMART_ABS/RS485_COM_M/n6097</a>             |       1|    2161|     52.76%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6093">SMART_ABS/RS485_COM_M/n6093</a>             |       1|    1809|     44.17%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7091">SMART_ABS/RS485_COM_M/n7091</a>             |       5|    1645|     40.16%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n1378">SMART_ABS/RS485_COM_M/n1378</a>             |       1|    1275|     31.13%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7382">SMART_ABS/RS485_COM_M/n7382</a>             |       3|    1185|     28.93%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/time_interval_reg_13">13</a>                                      |       8|    1176|     28.71%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n7090">SMART_ABS/RS485_COM_M/n7090</a>             |       2|    1074|     26.22%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/time_interval_reg_12">12</a>                                      |       6|     919|     22.44%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/time_interval_reg_10">10</a>                                      |      10|     843|     20.58%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n5856">SMART_ABS/RS485_COM_M/n5856</a>             |       5|     740|     18.07%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n6497">SMART_ABS/RS485_COM_M/n6497</a>             |       3|     701|     17.11%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/time_interval_reg_11">11</a>                                      |       7|     674|     16.46%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/n5864">SMART_ABS/RS485_COM_M/n5864</a>             |       2|     470|     11.47%
+                                        |        |        |
+SMART_ABS/RS485_COM_M/time_interval_reg_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SMART_ABS/RS485_COM_M/time_interval_reg_9">9</a>                                       |      11|     467|     11.40%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 221
+   Covered under: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 29367556
+Cumulative negative slack: 29367556
+
+Constraints cover 2819706 paths, 1 nets, and 2347 connections (84.39% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 07 16:05:49 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o FPGA_DSP_Impl1.twr -gui -msgset C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/promote.xml FPGA_DSP_Impl1.ncd FPGA_DSP_Impl1.prf 
+Design file:     fpga_dsp_impl1.ncd
+Preference file: fpga_dsp_impl1.prf
+Device,speed:    LCMXO2-2000HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "clk_in_c" 36.198000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i64  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i63  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_129 to SLICE_129 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_129 to SLICE_129:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R13C18A.CLK to     R13C18A.Q1 SLICE_129 (from clk_in_c)
+ROUTE         3     0.154     R13C18A.Q1 to     R13C18A.M0 SMART_ABS/RS485_COM_M/rx_data_reg_71 (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_129:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R13C18A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_129:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R13C18A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i66  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i65  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_130 to SLICE_130 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_130 to SLICE_130:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C13C.CLK to     R10C13C.Q1 SLICE_130 (from clk_in_c)
+ROUTE         3     0.154     R10C13C.Q1 to     R10C13C.M0 SMART_ABS/RS485_COM_M/rx_data_reg_73 (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_130:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C13C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_130:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C13C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i68  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i67  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_131 to SLICE_131 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_131 to SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C13B.CLK to      R4C13B.Q1 SLICE_131 (from clk_in_c)
+ROUTE         3     0.154      R4C13B.Q1 to      R4C13B.M0 SMART_ABS/RS485_COM_M/rx_data_reg_75 (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R4C13B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_131:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R4C13B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i70  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i69  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_132 to SLICE_132 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_132 to SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C18A.CLK to      R7C18A.Q1 SLICE_132 (from clk_in_c)
+ROUTE         3     0.154      R7C18A.Q1 to      R7C18A.M0 SMART_ABS/RS485_COM_M/rx_data_reg_77 (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R7C18A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_132:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R7C18A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ENCODER_CHECK/input_u_r_22  (from clk_in_c +)
+   Destination:    FF         Data in        ENCODER_CHECK/input_u_r1_23  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_155 to SLICE_155 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_155 to SLICE_155:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R12C17C.CLK to     R12C17C.Q0 SLICE_155 (from clk_in_c)
+ROUTE         2     0.154     R12C17C.Q0 to     R12C17C.M1 input_u_r (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_155:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R12C17C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_155:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R12C17C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ENCODER_CHECK/input_v_r_24  (from clk_in_c +)
+   Destination:    FF         Data in        ENCODER_CHECK/input_v_r1_25  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_156 to SLICE_156 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_156 to SLICE_156:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R11C16A.CLK to     R11C16A.Q0 SLICE_156 (from clk_in_c)
+ROUTE         2     0.154     R11C16A.Q0 to     R11C16A.M1 input_v_r (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_156:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R11C16A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_156:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R11C16A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              KEY_CHECK/k_up_r_46  (from clk_in_c +)
+   Destination:    FF         Data in        KEY_CHECK/k_up_rr_50  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_325 to SLICE_325 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_325 to SLICE_325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R9C11A.CLK to      R9C11A.Q0 SLICE_325 (from clk_in_c)
+ROUTE         2     0.154      R9C11A.Q0 to      R9C11A.M1 KEY_CHECK/k_up_r (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R9C11A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to     R9C11A.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ENCODER_CHECK/input_uvw_r_28  (from clk_in_c +)
+   Destination:    FF         Data in        ENCODER_CHECK/input_uvw_r1_29  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_342 to SLICE_342 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_342 to SLICE_342:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C13B.CLK to     R10C13B.Q1 SLICE_342 (from clk_in_c)
+ROUTE         2     0.154     R10C13B.Q1 to     R10C13B.M0 ENCODER_CHECK/input_uvw_r (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SLICE_342:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C13B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SLICE_342:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C13B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              KEY_CHECK/k_down_r_47  (from clk_in_c +)
+   Destination:    FF         Data in        KEY_CHECK/k_down_rr_51  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay KEY_CHECK/SLICE_320 to KEY_CHECK/SLICE_320 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path KEY_CHECK/SLICE_320 to KEY_CHECK/SLICE_320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C10C.CLK to     R10C10C.Q0 KEY_CHECK/SLICE_320 (from clk_in_c)
+ROUTE         2     0.154     R10C10C.Q0 to     R10C10C.M1 KEY_CHECK/k_down_r (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to KEY_CHECK/SLICE_320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C10C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to KEY_CHECK/SLICE_320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R10C10C.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SMART_ABS/RS485_COM_M/\SMART__7__i80  (from clk_in_c +)
+   Destination:    FF         Data in        SMART_ABS/RS485_COM_M/\SMART__7__i79  (to clk_in_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SMART_ABS/RS485_COM_M/SLICE_137 to SMART_ABS/RS485_COM_M/SLICE_137 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SMART_ABS/RS485_COM_M/SLICE_137 to SMART_ABS/RS485_COM_M/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R11C20B.CLK to     R11C20B.Q1 SMART_ABS/RS485_COM_M/SLICE_137 (from clk_in_c)
+ROUTE         3     0.154     R11C20B.Q1 to     R11C20B.M0 SMART_ABS/RS485_COM_M/rx_data_reg_87 (to clk_in_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R11C20B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_in to SMART_ABS/RS485_COM_M/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       221     0.858       86.PADDI to    R11C20B.CLK clk_in_c
+                  --------
+                    0.858   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 36.198000 MHz  |             |             |
+;                                       |     0.000 ns|     0.306 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 221
+   Covered under: FREQUENCY NET "clk_in_c" 36.198000 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 2819706 paths, 1 nets, and 2347 connections (84.39% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 29367556 (setup), 0 (hold)
+Cumulative negative slack: 29367556 (29367556+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

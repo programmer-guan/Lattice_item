@@ -1,0 +1,102 @@
+#Start recording tcl command: 11/9/2019 09:04:12
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/FPGA_DSP.ldf"
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program set -cable 
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program set -cable 
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+prj_run PAR -impl Impl1
+prj_run PAR -impl Impl1 -task PARTrace
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run PAR -impl Impl1 -task PARTrace
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program run
+pgr_project close
+#Stop recording: 11/9/2019 11:02:35

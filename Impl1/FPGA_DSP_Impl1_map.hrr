@@ -1,0 +1,94 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     304.00        100.0
+                                  LUT4	     483.00        100.0
+                                 IOBUF	         55        100.0
+                                PFUREG	        394        100.0
+                                RIPPLE	         62        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             smart_abs	          1        45.1
+                              smg_scan	          1        11.1
+                       out_pulse_check	          1         4.2
+                             key_check	          1         6.1
+                         encoder_check	          1         0.8
+                               dsp_com	          1        31.6
+---------------------------------------------------
+Report for cell out_pulse_check
+   Instance path: top/OUT_PULSE_CHECK
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      12.67         4.2
+                                  LUT4	      16.00         3.3
+                                PFUREG	         17         4.3
+                                RIPPLE	          5         8.1
+---------------------------------------------------
+Report for cell encoder_check
+   Instance path: top/ENCODER_CHECK
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.33         0.8
+                                  LUT4	       1.00         0.2
+                                PFUREG	          8         2.0
+---------------------------------------------------
+Report for cell dsp_com
+   Instance path: top/DSP_COM
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      96.00        31.6
+                                  LUT4	     160.00        33.1
+                                PFUREG	         96        24.4
+                                RIPPLE	         15        24.2
+---------------------------------------------------
+Report for cell smart_abs
+   Instance path: top/SMART_ABS
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     137.08        45.1
+                                  LUT4	     233.00        48.2
+                                PFUREG	        204        51.8
+                                RIPPLE	         20        32.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             rs485_com	          1        45.1
+---------------------------------------------------
+Report for cell rs485_com
+   Instance path: top/SMART_ABS/RS485_COM_M
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     137.08        45.1
+                                  LUT4	     233.00        48.2
+                                PFUREG	        204        51.8
+                                RIPPLE	         20        32.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                 crc_8	          1         2.7
+---------------------------------------------------
+Report for cell crc_8
+   Instance path: top/SMART_ABS/RS485_COM_M/u_crc
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.25         2.7
+                                  LUT4	      24.00         5.0
+                                PFUREG	          8         2.0
+---------------------------------------------------
+Report for cell smg_scan
+   Instance path: top/SMG_SCAN
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      33.75        11.1
+                                  LUT4	      47.00         9.7
+                                PFUREG	         37         9.4
+                                RIPPLE	         11        17.7
+---------------------------------------------------
+Report for cell key_check
+   Instance path: top/KEY_CHECK
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.67         6.1
+                                  LUT4	      16.00         3.3
+                                PFUREG	         32         8.1
+                                RIPPLE	         11        17.7

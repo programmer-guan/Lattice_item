@@ -1,0 +1,13 @@
+#Start recording tcl command: 1/7/2020 15:36:27
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1/FPGA_DSP.ldf"
+prj_dev set -part LCMXO2-2000HC-4TG100C
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+#Stop recording: 1/7/2020 15:51:40

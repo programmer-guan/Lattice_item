@@ -1,0 +1,412 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Jan 07 16:05:26 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_in_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 47.705ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FD1P3IX    D              \SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:                  52.545ns  (29.9% logic, 70.1% route), 33 logic levels.
+
+ Constraint Details:
+
+     52.545ns data_path \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 47.705ns
+
+ Path Details: \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \SMART_ABS/RS485_COM_M/time_interval_reg__i9 (from clk_in_c)
+Route        11   e 1.689                                  \SMART_ABS/RS485_COM_M/time_interval_reg[9]
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i3_4_lut_then_4_lut
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n7382
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6516
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n6497
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_90
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7091
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i1830_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n2419
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_4_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n6506
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_84
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n7085
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i773_3_lut_4_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i780_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6512
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_84
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n2824
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_3_lut_4_lut_adj_51
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6097
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i6251_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6787
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i3_3_lut_rep_82_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n7083
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i838_3_lut_rep_150
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7378
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i852_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1022
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n5868
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i802_3_lut_rep_78
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n7079
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i816_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1041
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_69
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6500
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_75_3_lut
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n7076
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1050_3_lut_rep_149
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7377
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/n5868_bdd_4_lut_6499
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n6951
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6313
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6953
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6509
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_73_3_lut_4_lut
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7074
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1187_3_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n4_adj_1025
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1201_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1042
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1026
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i4_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n5892
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1150_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n4_adj_1040
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i1157_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1045
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut_adj_80
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n384
+                  --------
+                   52.545  (29.9% logic, 70.1% route), 33 logic levels.
+
+
+Error:  The following path violates requirements by 47.705ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FD1P3IX    D              \SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:                  52.545ns  (29.9% logic, 70.1% route), 33 logic levels.
+
+ Constraint Details:
+
+     52.545ns data_path \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 47.705ns
+
+ Path Details: \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \SMART_ABS/RS485_COM_M/time_interval_reg__i9 (from clk_in_c)
+Route        11   e 1.689                                  \SMART_ABS/RS485_COM_M/time_interval_reg[9]
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i3_4_lut_then_4_lut
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n7382
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6516
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n6497
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_90
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7091
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i886_2_lut_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n1378
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_4_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n6506
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_84
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n7085
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i773_3_lut_4_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i780_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6512
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_84
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n2824
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_3_lut_4_lut_adj_53
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6093
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i6251_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6787
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i3_3_lut_rep_82_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n7083
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i838_3_lut_rep_150
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7378
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i852_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1022
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n5868
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i802_3_lut_rep_78
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n7079
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i816_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1041
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_69
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6500
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_75_3_lut
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n7076
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1050_3_lut_rep_149
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7377
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/n5868_bdd_4_lut_6499
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n6951
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6313
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6953
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6509
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_73_3_lut_4_lut
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7074
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1187_3_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n4_adj_1025
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1201_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1042
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1026
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i4_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n5892
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1150_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n4_adj_1040
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i1157_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1045
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut_adj_80
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n384
+                  --------
+                   52.545  (29.9% logic, 70.1% route), 33 logic levels.
+
+
+Error:  The following path violates requirements by 47.705ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \SMART_ABS/RS485_COM_M/time_interval_reg__i9  (from clk_in_c +)
+   Destination:    FD1P3IX    D              \SMART_ABS/RS485_COM_M/time_interval__i0  (to clk_in_c +)
+
+   Delay:                  52.545ns  (29.9% logic, 70.1% route), 33 logic levels.
+
+ Constraint Details:
+
+     52.545ns data_path \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 47.705ns
+
+ Path Details: \SMART_ABS/RS485_COM_M/time_interval_reg__i9 to \SMART_ABS/RS485_COM_M/time_interval__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \SMART_ABS/RS485_COM_M/time_interval_reg__i9 (from clk_in_c)
+Route        11   e 1.689                                  \SMART_ABS/RS485_COM_M/time_interval_reg[9]
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i3_4_lut_then_4_lut
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n7382
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6516
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n6497
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_90
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7091
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i886_2_lut_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n1378
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_4_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n6506
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_2_lut_rep_84
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n7085
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i773_3_lut_4_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i780_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n6512
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_84
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n2824
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1_3_lut_4_lut_adj_51
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6097
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i6251_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6787
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i3_3_lut_rep_82_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n7083
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i838_3_lut_rep_150
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7378
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i852_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1022
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut
+Route         9   e 1.574                                  \SMART_ABS/RS485_COM_M/n5868
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i802_3_lut_rep_78
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n7079
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i816_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1041
+LUT4        ---     0.493              A to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_adj_69
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6500
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_75_3_lut
+Route         8   e 1.540                                  \SMART_ABS/RS485_COM_M/n7076
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1050_3_lut_rep_149
+Route         2   e 1.141                                  \SMART_ABS/RS485_COM_M/n7377
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/n5868_bdd_4_lut_6499
+Route         1   e 0.020                                  \SMART_ABS/RS485_COM_M/n6951
+MUXL5       ---     0.233           ALUT to Z              \SMART_ABS/RS485_COM_M/i6313
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6953
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n6509
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i2_3_lut_rep_73_3_lut_4_lut
+Route         5   e 1.405                                  \SMART_ABS/RS485_COM_M/n7074
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1187_3_lut
+Route         3   e 1.258                                  \SMART_ABS/RS485_COM_M/n4_adj_1025
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1201_4_lut_3_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n8_adj_1042
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i1_4_lut_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1026
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i4_4_lut
+Route         4   e 1.340                                  \SMART_ABS/RS485_COM_M/n5892
+LUT4        ---     0.493              B to Z              \SMART_ABS/RS485_COM_M/i1150_4_lut_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n4_adj_1040
+LUT4        ---     0.493              D to Z              \SMART_ABS/RS485_COM_M/i1157_4_lut
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n6_adj_1045
+LUT4        ---     0.493              C to Z              \SMART_ABS/RS485_COM_M/i4_4_lut_4_lut_adj_80
+Route         1   e 0.941                                  \SMART_ABS/RS485_COM_M/n384
+                  --------
+                   52.545  (29.9% logic, 70.1% route), 33 logic levels.
+
+Warning: 52.705 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_in_c]                |     5.000 ns|    52.705 ns|    33 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\SMART_ABS/RS485_COM_M/n6_adj_1026      |       1|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n8               |       1|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n8_adj_1042      |       1|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n5892            |       4|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6506            |       3|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6509            |       4|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6512            |       2|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7074            |       5|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7076            |       8|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7085            |       4|    4096|     99.00%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n2824            |       8|    4092|     99.90%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7083            |       9|    4067|     99.29%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6787            |       1|    4063|     99.19%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n5868            |       9|    4054|     98.97%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n8_adj_1041      |       1|    4042|     98.68%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6500            |       4|    4042|     98.68%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n384             |       1|    4012|     97.95%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n8_adj_1022      |       1|    3752|     91.60%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6_adj_1045      |       1|    3604|     87.99%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6953            |       1|    3334|     81.40%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n4_adj_1025      |       3|    3266|     79.74%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6               |       2|    3127|     76.34%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7079            |       1|    2861|     69.85%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7378            |       2|    2808|     68.55%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6951            |       1|    2788|     68.07%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7377            |       2|    2788|     68.07%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n2419            |       1|    2562|     62.55%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n4_adj_1040      |       1|    2550|     62.26%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n253             |       7|    2121|     51.78%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7091            |       5|    2076|     50.68%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6097            |       1|    2033|     49.63%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6093            |       1|    2030|     49.56%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n6497            |       5|    1807|     44.12%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n1378            |       1|    1454|     35.50%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7382            |       1|    1285|     31.37%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/time_interval_reg|        |        |
+[13]                                    |       6|    1110|     27.10%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/time_interval_reg|        |        |
+[10]                                    |       8|     854|     20.85%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/time_interval_reg|        |        |
+[11]                                    |       7|     854|     20.85%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n5856            |       5|     821|     20.04%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/time_interval_reg|        |        |
+[12]                                    |       6|     813|     19.85%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7090            |       2|     791|     19.31%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/n7_adj_1030      |       1|     610|     14.89%
+                                        |        |        |
+\SMART_ABS/RS485_COM_M/time_interval_reg|        |        |
+[9]                                     |      11|     447|     10.91%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 180155423
+
+Constraints cover  2827644 paths, 1029 nets, and 2805 connections (86.5% coverage)
+
+
+Peak memory: 93401088 bytes, TRCE: 14639104 bytes, DLYMAN: 327680 bytes
+CPU_TIME_REPORT: 0 secs 

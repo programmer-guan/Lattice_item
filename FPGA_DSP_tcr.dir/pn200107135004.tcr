@@ -1,0 +1,4 @@
+#Start recording tcl command: 1/7/2020 13:47:27
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/FPGA_DSP.ldf"
+#Stop recording: 1/7/2020 13:50:04

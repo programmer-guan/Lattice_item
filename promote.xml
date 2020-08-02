@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userSetting name="C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/promote.xml" version="Diamond (64-bit) 3.11.0.396.4" date="Wed Jan 08 11:45:39 2020" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="35901116" type="Warning" />
+  <msg mid="35931002" type="Warning" />
+  <msg mid="35901010" type="Error" />
+  <msg mid="35909000" type="Info" />
+  <msg mid="35901466" type="Warning" />
+  <msg mid="35901162" type="Error" />
+  <msg mid="35901208" type="Warning" />
+  <msg mid="35901209" type="Warning" />
+  <msg mid="35901221" type="Warning" />
+  <msg mid="35901310" type="Info" />
+  <msg mid="35901875" type="Warning" />
+</userSetting>

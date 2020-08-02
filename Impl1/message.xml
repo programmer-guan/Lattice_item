@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901116</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(44): </Dynamic>
+            <Dynamic>tbaud_reg</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>44</Navigation>
+        </Message>
+        <Message>
+            <ID>35901329</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(44): </Dynamic>
+            <Dynamic>tbaud_reg</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>44</Navigation>
+        </Message>
+        <Message>
+            <ID>35901310</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(30): </Dynamic>
+            <Dynamic>tbaud_reg</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(147): </Dynamic>
+            <Dynamic>crc_out</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>147</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v(1): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/dsp_com.v(1): </Dynamic>
+            <Dynamic>dsp_com</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/dsp_com.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/smg_scan.v(1): </Dynamic>
+            <Dynamic>smg_scan</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/smg_scan.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/key_check.v(1): </Dynamic>
+            <Dynamic>key_check</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/key_check.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/smart_abs.v(3): </Dynamic>
+            <Dynamic>smart_abs</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/smart_abs.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(3): </Dynamic>
+            <Dynamic>rs485_com</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(157): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>157</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/crc_8.v(20): </Dynamic>
+            <Dynamic>crc_8</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/crc_8.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v(179): </Dynamic>
+            <Dynamic>13</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/rs485_com.v</Navigation>
+            <Navigation>179</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v(3): </Dynamic>
+            <Dynamic>abz_phase</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/out_pulse_check.v(1): </Dynamic>
+            <Dynamic>out_pulse_check</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/out_pulse_check.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/encoder_check.v(1): </Dynamic>
+            <Dynamic>encoder_check</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/encoder_check.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v(197): </Dynamic>
+            <Dynamic>ENC_W</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v</Navigation>
+            <Navigation>197</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v(59): </Dynamic>
+            <Dynamic>pulse_en</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/top.v</Navigation>
+            <Navigation>59</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/encoder_check.v(52): </Dynamic>
+            <Dynamic>\ENCODER_CHECK/input_w_r_26</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/encoder_check.v</Navigation>
+            <Navigation>52</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v(78): </Dynamic>
+            <Dynamic>\SMART_ABS/ABZ_PHASE_M/b_phase_48</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v</Navigation>
+            <Navigation>78</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v(103): </Dynamic>
+            <Dynamic>\SMART_ABS/ABZ_PHASE_M/z_phase_51</Dynamic>
+            <Navigation>c:/users/administrator/desktop/lattice_item/lattice_item_v6/src/abz_phase.v</Navigation>
+            <Navigation>103</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\OUT_PULSE_CHECK/state</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\KEY_CHECK/key_data</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\KEY_CHECK/key_data</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\KEY_CHECK/key_data</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\KEY_CHECK/key_data</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\SMART_ABS/RS485_COM_M/com_error</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\SMART_ABS/RS485_COM_M/com_error</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

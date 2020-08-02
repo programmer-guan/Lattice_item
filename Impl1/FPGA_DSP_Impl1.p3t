@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "FPGA_DSP_Impl1.log"
+-o "FPGA_DSP_Impl1.csv"
+-pr "FPGA_DSP_Impl1.prf"

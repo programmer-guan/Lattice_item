@@ -1,0 +1,313 @@
+<HTML>
+<HEAD><TITLE>Lattice TCL Log</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="pn191105215927"></A><B><U><big>pn191105215927</big></U></B>
+#Start recording tcl command: 11/5/2019 21:43:24
+#Project Location: C:/Users/Administrator/Desktop/lattice_item; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.ldf"
+rvl_project open C:/Users/Administrator/Desktop/lattice_item/Reveal.rvl
+rvl_project close -force
+prj_run Export -impl Impl1
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/Impl1/Impl1.xcf"
+pgr_program run
+rva_project open "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_project run
+rva_project stop
+rva_project save "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_tu set -name TU2 -value "0"
+rva_project run
+rva_project run
+rva_project run
+rvl_project open C:/Users/Administrator/Desktop/lattice_item/Reveal.rvl
+rvl_trace add_sig  {{SMART_ABS_M/RS485_COM_M/crc_out[7:0]}}
+rvl_project save -overwrite C:/Users/Administrator/Desktop/lattice_item/Reveal.rvl
+rva_project save "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_project close
+rva_project open "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_te set -name TE2 -enable off
+rva_te set -name TE1 -enable on
+rva_project save "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rvl_project close
+rvl_project open C:/Users/Administrator/Desktop/lattice_item/Reveal.rvl
+rva_project run
+rva_project save "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_project close
+rvl_project close -force
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/Impl1/Impl1.xcf"
+pgr_program run
+rva_project open "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_project run
+rva_project run
+rva_project run
+rva_project run
+rva_project run
+rva_project run
+rva_project run
+rva_project run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/Impl1/Impl1.xcf"
+pgr_program run
+rva_project run
+rva_project run
+rva_project run
+rva_project save "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva"
+rva_project close
+pgr_project close
+#Stop recording: 11/5/2019 21:59:27
+
+
+
+<A name="pn191106110535"></A><B><U><big>pn191106110535</big></U></B>
+#Start recording tcl command: 11/6/2019 11:03:45
+#Project Location: C:/Users/Administrator/Desktop/lattice_item; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.ldf"
+#Stop recording: 11/6/2019 11:05:35
+
+
+
+<A name="pn191106112339"></A><B><U><big>pn191106112339</big></U></B>
+#Start recording tcl command: 11/6/2019 11:21:48
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1/FPGA_DSP.ldf"
+prj_run Export -impl Impl1
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1/Impl1/Impl1.xcf"
+pgr_program run
+pgr_project close
+#Stop recording: 11/6/2019 11:23:39
+
+
+
+<A name="pn191108090239"></A><B><U><big>pn191108090239</big></U></B>
+#Start recording tcl command: 11/8/2019 08:55:46
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/FPGA_DSP.ldf"
+rvl_project open C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/Reveal.rvl
+rvl_project save -overwrite C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/Reveal.rvl
+rvl_project close -force
+prj_dev set -part LCMXO2-640HC-4TG100C
+prj_run Export -impl Impl1
+#Stop recording: 11/8/2019 09:02:39
+
+
+
+<A name="pn191109110235"></A><B><U><big>pn191109110235</big></U></B>
+#Start recording tcl command: 11/9/2019 09:04:12
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/FPGA_DSP.ldf"
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program set -cable 
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program set -cable 
+pgr_program run
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+prj_run PAR -impl Impl1
+prj_run PAR -impl Impl1 -task PARTrace
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run PAR -impl Impl1 -task PARTrace
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+pgr_project save "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_project close
+pgr_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v4/Impl1/Impl1.xcf"
+pgr_program run
+pgr_program run
+pgr_project close
+#Stop recording: 11/9/2019 11:02:35
+
+
+
+<A name="pn191109120202"></A><B><U><big>pn191109120202</big></U></B>
+#Start recording tcl command: 11/9/2019 12:00:48
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/FPGA_DSP.ldf"
+prj_src add "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/FPGA_DSP.rva" "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/Reveal.rvl"
+prj_src remove "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/Reveal.rvl"
+prj_run Export -impl Impl1
+#Stop recording: 11/9/2019 12:02:02
+
+
+
+<A name="pn191218181705"></A><B><U><big>pn191218181705</big></U></B>
+#Start recording tcl command: 12/18/2019 09:18:02
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/FPGA_DSP.ldf"
+#Stop recording: 12/18/2019 18:17:05
+
+
+
+<A name="pn200107135004"></A><B><U><big>pn200107135004</big></U></B>
+#Start recording tcl command: 1/7/2020 13:47:27
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v5/FPGA_DSP.ldf"
+#Stop recording: 1/7/2020 13:50:04
+
+
+
+<A name="pn200107155140"></A><B><U><big>pn200107155140</big></U></B>
+#Start recording tcl command: 1/7/2020 15:36:27
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v1/FPGA_DSP.ldf"
+prj_dev set -part LCMXO2-2000HC-4TG100C
+prj_run Export -impl Impl1
+prj_run Export -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Synthesis -impl Impl1
+prj_run Export -impl Impl1
+#Stop recording: 1/7/2020 15:51:40
+
+
+
+<A name="pn200107161944"></A><B><U><big>pn200107161944</big></U></B>
+#Start recording tcl command: 1/7/2020 16:14:06
+#Project Location: C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6; Project name: FPGA_DSP
+prj_project open "C:/Users/Administrator/Desktop/lattice_item/lattice_item_v6/FPGA_DSP.ldf"
+#Stop recording: 1/7/2020 16:19:44
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

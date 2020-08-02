@@ -1,0 +1,1086 @@
+Logfile for Reveal Analyzer
+Version: Diamond 3.11.0.396.4
+Platform: Windows7 64bit
+Filename: C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+First created: 周三 十一月 6 10:59:33 2019
+[10:59:41] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:41] Connecting cableserver to run Reveal debugger....
+[10:59:41] @Connect
+[10:59:41] @SetSharableApplications,2,Reveal,Mico
+[10:59:41] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:41] @LockCable
+[10:59:41] @GetServerStatus
+[10:59:41] @Read
+[10:59:41] @SetTargetDevice,0
+[10:59:41] Connecting core0....
+[10:59:41] @ShiftIR,8,0,ER1
+[10:59:41] @ShiftDR,21,0,data (select core0)
+[10:59:41] @ShiftIR,8,0,ER2
+[10:59:41] Configuring core0....
+[10:59:41] @JumpState,RUN_TEST_IDLE
+[10:59:41] @JumpState,RUN_TEST_IDLE
+[10:59:41] @JumpState,RUN_TEST_IDLE
+[10:59:41] @ShiftIR,8,0,NOP
+[10:59:41] @JumpState,RUN_TEST_IDLE
+[10:59:41] @ShiftIR,8,0,ER2
+[10:59:41] @Set Odd Parity readback
+[10:59:41] @Set Odd Parity
+[10:59:41] @Set LA Start/Stop readback
+[10:59:41] @Set LA Start/Stop 
+[10:59:41] #Reveal IP Version = 1_6_042617
+[10:59:41] @Get Pattern
+[10:59:41] #pattern readout = a5a5
+[10:59:41] pattern readout passed!
+[10:59:41] @Get Tracy Signature
+[10:59:41] @Get Tracy Signature
+[10:59:41] #signature from core0 = 248294893
+[10:59:41] signature from core0 passed!
+[10:59:41] @Set Opcode Value
+[10:59:41] @Set Comp Value
+[10:59:41] @Set Mask Value
+[10:59:41] @Set Opcode Value
+[10:59:41] @Set Comp Value
+[10:59:41] @Set Mask Value
+[10:59:41] @Set Then Num
+[10:59:41] @Set NEXT THEN
+[10:59:41] @Set Cnt Cntg
+[10:59:41] @Set Event Count
+[10:59:41] @Set Then Num
+[10:59:41] @Set NEXT THEN
+[10:59:41] @Set Cnt Cntg
+[10:59:41] @Set Event Count
+[10:59:41] @Get BurstWrite CRC
+[10:59:41] @Set Truth Tbl Addr Cnter Init
+[10:59:41] @Set Truth Table Prog
+[10:59:41] Configuring in burst mode....
+[10:59:41] @Get BurstWrite CRC
+[10:59:41] @Enable TE Trig
+[10:59:41] @Enable Trig Output OR All readback
+[10:59:41] @Enable Trig Output OR All
+[10:59:41] @Set Pre-Trig Sample
+[10:59:41] @Set Post-Trig Sample
+[10:59:41] finished configuration of core0
+[10:59:41] Starting all active cores....
+[10:59:41] @ShiftIR,8,0,ER1
+[10:59:41] @ShiftDR,21,0,data (select active cores)
+[10:59:41] @ShiftIR,8,0,ER2
+[10:59:41] @Set LA Start cores
+[10:59:41] @UnlockCable
+[10:59:41] Running all active cores....
+[10:59:41] @LockCable
+[10:59:41] Polling trigger memory of core0....
+[10:59:41] @ShiftIR,8,0,ER1
+[10:59:41] @ShiftDR,21,0,data (select core0)
+[10:59:41] @ShiftIR,8,0,ER2
+[10:59:41] @Get Force Trigger bit
+[10:59:41] #TM_CTL_0=5
+[10:59:41] @Get Trig Detected Cnt
+[10:59:41] #numDetectedTriggers = 1
+[10:59:41] @Get Mem Block Full Cnt
+[10:59:41] #memFullCnt = 1
+[10:59:41] Downloading trigger memory of core0....
+[10:59:41] @Is LA Armed
+[10:59:41] @Set LA Start/Stop readback
+[10:59:41] @Set LA Start/Stop 
+[10:59:41] @Set LA Start/Stop readback
+[10:59:41] @Set LA Start/Stop 
+[10:59:41] @Get Trig Detected Cnt
+[10:59:41] #numDetectedTriggers = 1
+[10:59:41] @Get Mem Block Full Cnt
+[10:59:41] #memFullCnt = 1
+[10:59:41] @Get Last Addr Written
+[10:59:41] #lastAddrWritten = 28
+[10:59:41] @Get Multiple Trig Enbl
+[10:59:41] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:41] @Get BurstRead CRC
+[10:59:41] @Set Trace Mem Cnter Init
+[10:59:41] Uploading in burst mode....
+[10:59:42] @ShiftDR,49152,1,data (burst read)
+[10:59:42] @GetTDO,data,49152
+[10:59:42] @Get BurstRead CRC
+[10:59:42] @Get BurstRead CRC
+[10:59:42] @Get Pre-Trig Sample Num
+[10:59:42] @Get Post-Trig Sample Num
+[10:59:42] @Get Pre-Trig Samples Captured
+[10:59:42] @Get Trig Ptr
+[10:59:42] #trigPtr = 66
+[10:59:42] #dataSize=12, numRead=512, trace_out=512
+[10:59:42] #trig0={blockPosition:0,triggerPosition:32}
+[10:59:42] finished download trigger memory of core0
+[10:59:42] @UnlockCable
+[10:59:42] @ReleaseCablePort
+[10:59:42] @Disconnect
+[10:59:42] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[10:59:42] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:42] Connecting cableserver to run Reveal debugger....
+[10:59:42] @Connect
+[10:59:42] @SetSharableApplications,2,Reveal,Mico
+[10:59:43] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:43] @LockCable
+[10:59:43] @GetServerStatus
+[10:59:43] @Read
+[10:59:43] @SetTargetDevice,0
+[10:59:43] Connecting core0....
+[10:59:43] @ShiftIR,8,0,ER1
+[10:59:43] @ShiftDR,21,0,data (select core0)
+[10:59:43] @ShiftIR,8,0,ER2
+[10:59:43] Configuring core0....
+[10:59:43] @JumpState,RUN_TEST_IDLE
+[10:59:43] @JumpState,RUN_TEST_IDLE
+[10:59:43] @JumpState,RUN_TEST_IDLE
+[10:59:43] @ShiftIR,8,0,NOP
+[10:59:43] @JumpState,RUN_TEST_IDLE
+[10:59:43] @ShiftIR,8,0,ER2
+[10:59:43] @Set Odd Parity readback
+[10:59:43] @Set Odd Parity
+[10:59:43] @Set LA Start/Stop readback
+[10:59:43] @Set LA Start/Stop 
+[10:59:43] #Reveal IP Version = 1_6_042617
+[10:59:43] @Get Pattern
+[10:59:43] #pattern readout = a5a5
+[10:59:43] pattern readout passed!
+[10:59:43] @Get Tracy Signature
+[10:59:43] @Get Tracy Signature
+[10:59:43] #signature from core0 = 248294893
+[10:59:43] signature from core0 passed!
+[10:59:43] @Set Opcode Value
+[10:59:43] @Set Comp Value
+[10:59:43] @Set Mask Value
+[10:59:43] @Set Opcode Value
+[10:59:43] @Set Comp Value
+[10:59:43] @Set Mask Value
+[10:59:43] @Set Then Num
+[10:59:43] @Set NEXT THEN
+[10:59:43] @Set Cnt Cntg
+[10:59:43] @Set Event Count
+[10:59:43] @Set Then Num
+[10:59:43] @Set NEXT THEN
+[10:59:43] @Set Cnt Cntg
+[10:59:43] @Set Event Count
+[10:59:43] @Get BurstWrite CRC
+[10:59:43] @Set Truth Tbl Addr Cnter Init
+[10:59:43] @Set Truth Table Prog
+[10:59:43] Configuring in burst mode....
+[10:59:43] @Get BurstWrite CRC
+[10:59:43] @Enable TE Trig
+[10:59:43] @Enable Trig Output OR All readback
+[10:59:43] @Enable Trig Output OR All
+[10:59:43] @Set Pre-Trig Sample
+[10:59:43] @Set Post-Trig Sample
+[10:59:43] finished configuration of core0
+[10:59:43] Starting all active cores....
+[10:59:43] @ShiftIR,8,0,ER1
+[10:59:43] @ShiftDR,21,0,data (select active cores)
+[10:59:43] @ShiftIR,8,0,ER2
+[10:59:43] @Set LA Start cores
+[10:59:43] @UnlockCable
+[10:59:43] Running all active cores....
+[10:59:43] @LockCable
+[10:59:43] Polling trigger memory of core0....
+[10:59:43] @ShiftIR,8,0,ER1
+[10:59:43] @ShiftDR,21,0,data (select core0)
+[10:59:43] @ShiftIR,8,0,ER2
+[10:59:43] @Get Force Trigger bit
+[10:59:43] #TM_CTL_0=5
+[10:59:43] @Get Trig Detected Cnt
+[10:59:43] #numDetectedTriggers = 1
+[10:59:43] @Get Mem Block Full Cnt
+[10:59:43] #memFullCnt = 1
+[10:59:43] Downloading trigger memory of core0....
+[10:59:43] @Is LA Armed
+[10:59:43] @Set LA Start/Stop readback
+[10:59:43] @Set LA Start/Stop 
+[10:59:43] @Set LA Start/Stop readback
+[10:59:43] @Set LA Start/Stop 
+[10:59:43] @Get Trig Detected Cnt
+[10:59:43] #numDetectedTriggers = 1
+[10:59:43] @Get Mem Block Full Cnt
+[10:59:43] #memFullCnt = 1
+[10:59:43] @Get Last Addr Written
+[10:59:43] #lastAddrWritten = 132
+[10:59:43] @Get Multiple Trig Enbl
+[10:59:43] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:43] @Get BurstRead CRC
+[10:59:43] @Set Trace Mem Cnter Init
+[10:59:43] Uploading in burst mode....
+[10:59:43] @ShiftDR,49152,1,data (burst read)
+[10:59:43] @GetTDO,data,49152
+[10:59:43] @Get BurstRead CRC
+[10:59:43] @Get BurstRead CRC
+[10:59:43] @Get Pre-Trig Sample Num
+[10:59:43] @Get Post-Trig Sample Num
+[10:59:43] @Get Pre-Trig Samples Captured
+[10:59:43] @Get Trig Ptr
+[10:59:43] #trigPtr = 170
+[10:59:43] #dataSize=12, numRead=512, trace_out=512
+[10:59:43] #trig0={blockPosition:0,triggerPosition:32}
+[10:59:43] finished download trigger memory of core0
+[10:59:43] @UnlockCable
+[10:59:43] @ReleaseCablePort
+[10:59:43] @Disconnect
+[10:59:43] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[10:59:44] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:44] Connecting cableserver to run Reveal debugger....
+[10:59:44] @Connect
+[10:59:44] @SetSharableApplications,2,Reveal,Mico
+[10:59:45] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:45] @LockCable
+[10:59:45] @GetServerStatus
+[10:59:45] @Read
+[10:59:45] @SetTargetDevice,0
+[10:59:45] Connecting core0....
+[10:59:45] @ShiftIR,8,0,ER1
+[10:59:45] @ShiftDR,21,0,data (select core0)
+[10:59:45] @ShiftIR,8,0,ER2
+[10:59:45] Configuring core0....
+[10:59:45] @JumpState,RUN_TEST_IDLE
+[10:59:45] @JumpState,RUN_TEST_IDLE
+[10:59:45] @JumpState,RUN_TEST_IDLE
+[10:59:45] @ShiftIR,8,0,NOP
+[10:59:45] @JumpState,RUN_TEST_IDLE
+[10:59:45] @ShiftIR,8,0,ER2
+[10:59:45] @Set Odd Parity readback
+[10:59:45] @Set Odd Parity
+[10:59:45] @Set LA Start/Stop readback
+[10:59:45] @Set LA Start/Stop 
+[10:59:45] #Reveal IP Version = 1_6_042617
+[10:59:45] @Get Pattern
+[10:59:45] #pattern readout = a5a5
+[10:59:45] pattern readout passed!
+[10:59:45] @Get Tracy Signature
+[10:59:45] @Get Tracy Signature
+[10:59:45] #signature from core0 = 248294893
+[10:59:45] signature from core0 passed!
+[10:59:45] @Set Opcode Value
+[10:59:45] @Set Comp Value
+[10:59:45] @Set Mask Value
+[10:59:45] @Set Opcode Value
+[10:59:45] @Set Comp Value
+[10:59:45] @Set Mask Value
+[10:59:45] @Set Then Num
+[10:59:45] @Set NEXT THEN
+[10:59:45] @Set Cnt Cntg
+[10:59:45] @Set Event Count
+[10:59:45] @Set Then Num
+[10:59:45] @Set NEXT THEN
+[10:59:45] @Set Cnt Cntg
+[10:59:45] @Set Event Count
+[10:59:45] @Get BurstWrite CRC
+[10:59:45] @Set Truth Tbl Addr Cnter Init
+[10:59:45] @Set Truth Table Prog
+[10:59:45] Configuring in burst mode....
+[10:59:45] @Get BurstWrite CRC
+[10:59:45] @Enable TE Trig
+[10:59:45] @Enable Trig Output OR All readback
+[10:59:45] @Enable Trig Output OR All
+[10:59:45] @Set Pre-Trig Sample
+[10:59:45] @Set Post-Trig Sample
+[10:59:45] finished configuration of core0
+[10:59:45] Starting all active cores....
+[10:59:45] @ShiftIR,8,0,ER1
+[10:59:45] @ShiftDR,21,0,data (select active cores)
+[10:59:45] @ShiftIR,8,0,ER2
+[10:59:45] @Set LA Start cores
+[10:59:45] @UnlockCable
+[10:59:45] Running all active cores....
+[10:59:45] @LockCable
+[10:59:45] Polling trigger memory of core0....
+[10:59:45] @ShiftIR,8,0,ER1
+[10:59:45] @ShiftDR,21,0,data (select core0)
+[10:59:45] @ShiftIR,8,0,ER2
+[10:59:45] @Get Force Trigger bit
+[10:59:45] #TM_CTL_0=5
+[10:59:45] @Get Trig Detected Cnt
+[10:59:45] #numDetectedTriggers = 1
+[10:59:45] @Get Mem Block Full Cnt
+[10:59:45] #memFullCnt = 1
+[10:59:45] Downloading trigger memory of core0....
+[10:59:45] @Is LA Armed
+[10:59:45] @Set LA Start/Stop readback
+[10:59:45] @Set LA Start/Stop 
+[10:59:45] @Set LA Start/Stop readback
+[10:59:45] @Set LA Start/Stop 
+[10:59:45] @Get Trig Detected Cnt
+[10:59:45] #numDetectedTriggers = 1
+[10:59:45] @Get Mem Block Full Cnt
+[10:59:45] #memFullCnt = 1
+[10:59:45] @Get Last Addr Written
+[10:59:45] #lastAddrWritten = 455
+[10:59:45] @Get Multiple Trig Enbl
+[10:59:45] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:45] @Get BurstRead CRC
+[10:59:45] @Set Trace Mem Cnter Init
+[10:59:45] Uploading in burst mode....
+[10:59:45] @ShiftDR,49152,1,data (burst read)
+[10:59:45] @GetTDO,data,49152
+[10:59:45] @Get BurstRead CRC
+[10:59:45] @Get BurstRead CRC
+[10:59:45] @Get Pre-Trig Sample Num
+[10:59:45] @Get Post-Trig Sample Num
+[10:59:45] @Get Pre-Trig Samples Captured
+[10:59:45] @Get Trig Ptr
+[10:59:45] #trigPtr = 493
+[10:59:45] #dataSize=12, numRead=512, trace_out=512
+[10:59:45] #trig0={blockPosition:0,triggerPosition:32}
+[10:59:45] finished download trigger memory of core0
+[10:59:45] @UnlockCable
+[10:59:45] @ReleaseCablePort
+[10:59:45] @Disconnect
+[10:59:45] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[10:59:51] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:51] Connecting cableserver to run Reveal debugger....
+[10:59:51] @Connect
+[10:59:51] @SetSharableApplications,2,Reveal,Mico
+[10:59:51] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:51] @LockCable
+[10:59:51] @GetServerStatus
+[10:59:51] @Read
+[10:59:51] @SetTargetDevice,0
+[10:59:51] Connecting core0....
+[10:59:51] @ShiftIR,8,0,ER1
+[10:59:51] @ShiftDR,21,0,data (select core0)
+[10:59:51] @ShiftIR,8,0,ER2
+[10:59:51] Configuring core0....
+[10:59:51] @JumpState,RUN_TEST_IDLE
+[10:59:51] @JumpState,RUN_TEST_IDLE
+[10:59:51] @JumpState,RUN_TEST_IDLE
+[10:59:51] @ShiftIR,8,0,NOP
+[10:59:51] @JumpState,RUN_TEST_IDLE
+[10:59:51] @ShiftIR,8,0,ER2
+[10:59:51] @Set Odd Parity readback
+[10:59:51] @Set Odd Parity
+[10:59:51] @Set LA Start/Stop readback
+[10:59:51] @Set LA Start/Stop 
+[10:59:51] #Reveal IP Version = 1_6_042617
+[10:59:51] @Get Pattern
+[10:59:51] #pattern readout = a5a5
+[10:59:51] pattern readout passed!
+[10:59:51] @Get Tracy Signature
+[10:59:51] @Get Tracy Signature
+[10:59:51] #signature from core0 = 248294893
+[10:59:51] signature from core0 passed!
+[10:59:51] @Set Opcode Value
+[10:59:51] @Set Comp Value
+[10:59:51] @Set Mask Value
+[10:59:51] @Set Opcode Value
+[10:59:51] @Set Comp Value
+[10:59:51] @Set Mask Value
+[10:59:51] @Set Then Num
+[10:59:51] @Set NEXT THEN
+[10:59:51] @Set Cnt Cntg
+[10:59:51] @Set Event Count
+[10:59:51] @Set Then Num
+[10:59:51] @Set NEXT THEN
+[10:59:51] @Set Cnt Cntg
+[10:59:51] @Set Event Count
+[10:59:51] @Get BurstWrite CRC
+[10:59:51] @Set Truth Tbl Addr Cnter Init
+[10:59:51] @Set Truth Table Prog
+[10:59:51] Configuring in burst mode....
+[10:59:51] @Get BurstWrite CRC
+[10:59:51] @Enable TE Trig
+[10:59:51] @Enable Trig Output OR All readback
+[10:59:51] @Enable Trig Output OR All
+[10:59:51] @Set Pre-Trig Sample
+[10:59:51] @Set Post-Trig Sample
+[10:59:51] finished configuration of core0
+[10:59:51] Starting all active cores....
+[10:59:51] @ShiftIR,8,0,ER1
+[10:59:51] @ShiftDR,21,0,data (select active cores)
+[10:59:51] @ShiftIR,8,0,ER2
+[10:59:51] @Set LA Start cores
+[10:59:51] @UnlockCable
+[10:59:51] Running all active cores....
+[10:59:51] @LockCable
+[10:59:51] Polling trigger memory of core0....
+[10:59:51] @ShiftIR,8,0,ER1
+[10:59:51] @ShiftDR,21,0,data (select core0)
+[10:59:51] @ShiftIR,8,0,ER2
+[10:59:51] @Get Force Trigger bit
+[10:59:51] #TM_CTL_0=5
+[10:59:51] @Get Trig Detected Cnt
+[10:59:51] #numDetectedTriggers = 1
+[10:59:51] @Get Mem Block Full Cnt
+[10:59:51] #memFullCnt = 1
+[10:59:51] Downloading trigger memory of core0....
+[10:59:51] @Is LA Armed
+[10:59:51] @Set LA Start/Stop readback
+[10:59:51] @Set LA Start/Stop 
+[10:59:51] @Set LA Start/Stop readback
+[10:59:51] @Set LA Start/Stop 
+[10:59:51] @Get Trig Detected Cnt
+[10:59:51] #numDetectedTriggers = 1
+[10:59:51] @Get Mem Block Full Cnt
+[10:59:51] #memFullCnt = 1
+[10:59:51] @Get Last Addr Written
+[10:59:51] #lastAddrWritten = 480
+[10:59:51] @Get Multiple Trig Enbl
+[10:59:51] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:51] @Get BurstRead CRC
+[10:59:51] @Set Trace Mem Cnter Init
+[10:59:51] Uploading in burst mode....
+[10:59:51] @ShiftDR,49152,1,data (burst read)
+[10:59:51] @GetTDO,data,49152
+[10:59:51] @Get BurstRead CRC
+[10:59:51] @Get BurstRead CRC
+[10:59:51] @Get Pre-Trig Sample Num
+[10:59:51] @Get Post-Trig Sample Num
+[10:59:51] @Get Pre-Trig Samples Captured
+[10:59:51] @Get Trig Ptr
+[10:59:51] #trigPtr = 6
+[10:59:51] #dataSize=12, numRead=512, trace_out=481
+[10:59:51] #trig0={blockPosition:0,triggerPosition:1}
+[10:59:51] finished download trigger memory of core0
+[10:59:51] @UnlockCable
+[10:59:51] @ReleaseCablePort
+[10:59:51] @Disconnect
+[10:59:51] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[10:59:55] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:55] Connecting cableserver to run Reveal debugger....
+[10:59:55] @Connect
+[10:59:55] @SetSharableApplications,2,Reveal,Mico
+[10:59:55] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:55] @LockCable
+[10:59:55] @GetServerStatus
+[10:59:55] @Read
+[10:59:55] @SetTargetDevice,0
+[10:59:55] Connecting core0....
+[10:59:55] @ShiftIR,8,0,ER1
+[10:59:55] @ShiftDR,21,0,data (select core0)
+[10:59:55] @ShiftIR,8,0,ER2
+[10:59:55] Configuring core0....
+[10:59:55] @JumpState,RUN_TEST_IDLE
+[10:59:55] @JumpState,RUN_TEST_IDLE
+[10:59:55] @JumpState,RUN_TEST_IDLE
+[10:59:55] @ShiftIR,8,0,NOP
+[10:59:55] @JumpState,RUN_TEST_IDLE
+[10:59:55] @ShiftIR,8,0,ER2
+[10:59:55] @Set Odd Parity readback
+[10:59:55] @Set Odd Parity
+[10:59:55] @Set LA Start/Stop readback
+[10:59:55] @Set LA Start/Stop 
+[10:59:55] #Reveal IP Version = 1_6_042617
+[10:59:55] @Get Pattern
+[10:59:55] #pattern readout = a5a5
+[10:59:55] pattern readout passed!
+[10:59:55] @Get Tracy Signature
+[10:59:55] @Get Tracy Signature
+[10:59:55] #signature from core0 = 248294893
+[10:59:55] signature from core0 passed!
+[10:59:55] @Set Opcode Value
+[10:59:55] @Set Comp Value
+[10:59:55] @Set Mask Value
+[10:59:55] @Set Opcode Value
+[10:59:55] @Set Comp Value
+[10:59:55] @Set Mask Value
+[10:59:55] @Set Then Num
+[10:59:55] @Set NEXT THEN
+[10:59:55] @Set Cnt Cntg
+[10:59:55] @Set Event Count
+[10:59:55] @Set Then Num
+[10:59:55] @Set NEXT THEN
+[10:59:55] @Set Cnt Cntg
+[10:59:55] @Set Event Count
+[10:59:55] @Get BurstWrite CRC
+[10:59:55] @Set Truth Tbl Addr Cnter Init
+[10:59:55] @Set Truth Table Prog
+[10:59:55] Configuring in burst mode....
+[10:59:56] @Get BurstWrite CRC
+[10:59:56] @Enable TE Trig
+[10:59:56] @Enable Trig Output OR All readback
+[10:59:56] @Enable Trig Output OR All
+[10:59:56] @Set Pre-Trig Sample
+[10:59:56] @Set Post-Trig Sample
+[10:59:56] finished configuration of core0
+[10:59:56] Starting all active cores....
+[10:59:56] @ShiftIR,8,0,ER1
+[10:59:56] @ShiftDR,21,0,data (select active cores)
+[10:59:56] @ShiftIR,8,0,ER2
+[10:59:56] @Set LA Start cores
+[10:59:56] @UnlockCable
+[10:59:56] Running all active cores....
+[10:59:56] @LockCable
+[10:59:56] Polling trigger memory of core0....
+[10:59:56] @ShiftIR,8,0,ER1
+[10:59:56] @ShiftDR,21,0,data (select core0)
+[10:59:56] @ShiftIR,8,0,ER2
+[10:59:56] @Get Force Trigger bit
+[10:59:56] #TM_CTL_0=5
+[10:59:56] @Get Trig Detected Cnt
+[10:59:56] #numDetectedTriggers = 1
+[10:59:56] @Get Mem Block Full Cnt
+[10:59:56] #memFullCnt = 1
+[10:59:56] Downloading trigger memory of core0....
+[10:59:56] @Is LA Armed
+[10:59:56] @Set LA Start/Stop readback
+[10:59:56] @Set LA Start/Stop 
+[10:59:56] @Set LA Start/Stop readback
+[10:59:56] @Set LA Start/Stop 
+[10:59:56] @Get Trig Detected Cnt
+[10:59:56] #numDetectedTriggers = 1
+[10:59:56] @Get Mem Block Full Cnt
+[10:59:56] #memFullCnt = 1
+[10:59:56] @Get Last Addr Written
+[10:59:56] #lastAddrWritten = 480
+[10:59:56] @Get Multiple Trig Enbl
+[10:59:56] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:56] @Get BurstRead CRC
+[10:59:56] @Set Trace Mem Cnter Init
+[10:59:56] Uploading in burst mode....
+[10:59:56] @ShiftDR,49152,1,data (burst read)
+[10:59:56] @GetTDO,data,49152
+[10:59:56] @Get BurstRead CRC
+[10:59:56] @Get BurstRead CRC
+[10:59:56] @Get Pre-Trig Sample Num
+[10:59:56] @Get Post-Trig Sample Num
+[10:59:56] @Get Pre-Trig Samples Captured
+[10:59:56] @Get Trig Ptr
+[10:59:56] #trigPtr = 6
+[10:59:56] #dataSize=12, numRead=512, trace_out=481
+[10:59:56] #trig0={blockPosition:0,triggerPosition:1}
+[10:59:56] finished download trigger memory of core0
+[10:59:56] @UnlockCable
+[10:59:56] @ReleaseCablePort
+[10:59:56] @Disconnect
+[10:59:56] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[10:59:57] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[10:59:57] Connecting cableserver to run Reveal debugger....
+[10:59:57] @Connect
+[10:59:57] @SetSharableApplications,2,Reveal,Mico
+[10:59:57] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[10:59:57] @LockCable
+[10:59:57] @GetServerStatus
+[10:59:57] @Read
+[10:59:57] @SetTargetDevice,0
+[10:59:57] Connecting core0....
+[10:59:57] @ShiftIR,8,0,ER1
+[10:59:57] @ShiftDR,21,0,data (select core0)
+[10:59:57] @ShiftIR,8,0,ER2
+[10:59:57] Configuring core0....
+[10:59:57] @JumpState,RUN_TEST_IDLE
+[10:59:57] @JumpState,RUN_TEST_IDLE
+[10:59:57] @JumpState,RUN_TEST_IDLE
+[10:59:57] @ShiftIR,8,0,NOP
+[10:59:57] @JumpState,RUN_TEST_IDLE
+[10:59:57] @ShiftIR,8,0,ER2
+[10:59:57] @Set Odd Parity readback
+[10:59:57] @Set Odd Parity
+[10:59:57] @Set LA Start/Stop readback
+[10:59:57] @Set LA Start/Stop 
+[10:59:57] #Reveal IP Version = 1_6_042617
+[10:59:57] @Get Pattern
+[10:59:57] #pattern readout = a5a5
+[10:59:57] pattern readout passed!
+[10:59:57] @Get Tracy Signature
+[10:59:57] @Get Tracy Signature
+[10:59:57] #signature from core0 = 248294893
+[10:59:57] signature from core0 passed!
+[10:59:57] @Set Opcode Value
+[10:59:57] @Set Comp Value
+[10:59:57] @Set Mask Value
+[10:59:57] @Set Opcode Value
+[10:59:57] @Set Comp Value
+[10:59:57] @Set Mask Value
+[10:59:57] @Set Then Num
+[10:59:57] @Set NEXT THEN
+[10:59:57] @Set Cnt Cntg
+[10:59:57] @Set Event Count
+[10:59:57] @Set Then Num
+[10:59:57] @Set NEXT THEN
+[10:59:57] @Set Cnt Cntg
+[10:59:57] @Set Event Count
+[10:59:57] @Get BurstWrite CRC
+[10:59:57] @Set Truth Tbl Addr Cnter Init
+[10:59:57] @Set Truth Table Prog
+[10:59:57] Configuring in burst mode....
+[10:59:57] @Get BurstWrite CRC
+[10:59:57] @Enable TE Trig
+[10:59:57] @Enable Trig Output OR All readback
+[10:59:57] @Enable Trig Output OR All
+[10:59:57] @Set Pre-Trig Sample
+[10:59:57] @Set Post-Trig Sample
+[10:59:57] finished configuration of core0
+[10:59:57] Starting all active cores....
+[10:59:57] @ShiftIR,8,0,ER1
+[10:59:57] @ShiftDR,21,0,data (select active cores)
+[10:59:57] @ShiftIR,8,0,ER2
+[10:59:57] @Set LA Start cores
+[10:59:57] @UnlockCable
+[10:59:57] Running all active cores....
+[10:59:57] @LockCable
+[10:59:57] Polling trigger memory of core0....
+[10:59:57] @ShiftIR,8,0,ER1
+[10:59:57] @ShiftDR,21,0,data (select core0)
+[10:59:57] @ShiftIR,8,0,ER2
+[10:59:57] @Get Force Trigger bit
+[10:59:57] #TM_CTL_0=5
+[10:59:57] @Get Trig Detected Cnt
+[10:59:57] #numDetectedTriggers = 1
+[10:59:57] @Get Mem Block Full Cnt
+[10:59:57] #memFullCnt = 1
+[10:59:57] Downloading trigger memory of core0....
+[10:59:57] @Is LA Armed
+[10:59:57] @Set LA Start/Stop readback
+[10:59:57] @Set LA Start/Stop 
+[10:59:57] @Set LA Start/Stop readback
+[10:59:57] @Set LA Start/Stop 
+[10:59:57] @Get Trig Detected Cnt
+[10:59:57] #numDetectedTriggers = 1
+[10:59:57] @Get Mem Block Full Cnt
+[10:59:57] #memFullCnt = 1
+[10:59:57] @Get Last Addr Written
+[10:59:57] #lastAddrWritten = 480
+[10:59:57] @Get Multiple Trig Enbl
+[10:59:57] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[10:59:57] @Get BurstRead CRC
+[10:59:57] @Set Trace Mem Cnter Init
+[10:59:57] Uploading in burst mode....
+[10:59:57] @ShiftDR,49152,1,data (burst read)
+[10:59:57] @GetTDO,data,49152
+[10:59:57] @Get BurstRead CRC
+[10:59:57] @Get BurstRead CRC
+[10:59:57] @Get Pre-Trig Sample Num
+[10:59:57] @Get Post-Trig Sample Num
+[10:59:57] @Get Pre-Trig Samples Captured
+[10:59:57] @Get Trig Ptr
+[10:59:57] #trigPtr = 6
+[10:59:57] #dataSize=12, numRead=512, trace_out=481
+[10:59:57] #trig0={blockPosition:0,triggerPosition:1}
+[10:59:57] finished download trigger memory of core0
+[10:59:57] @UnlockCable
+[10:59:57] @ReleaseCablePort
+[10:59:57] @Disconnect
+[10:59:57] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[11:00:03] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[11:00:03] Connecting cableserver to run Reveal debugger....
+[11:00:03] @Connect
+[11:00:03] @SetSharableApplications,2,Reveal,Mico
+[11:00:04] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[11:00:04] @LockCable
+[11:00:04] @GetServerStatus
+[11:00:04] @Read
+[11:00:04] @SetTargetDevice,0
+[11:00:04] Connecting core0....
+[11:00:04] @ShiftIR,8,0,ER1
+[11:00:04] @ShiftDR,21,0,data (select core0)
+[11:00:04] @ShiftIR,8,0,ER2
+[11:00:04] Configuring core0....
+[11:00:04] @JumpState,RUN_TEST_IDLE
+[11:00:04] @JumpState,RUN_TEST_IDLE
+[11:00:04] @JumpState,RUN_TEST_IDLE
+[11:00:04] @ShiftIR,8,0,NOP
+[11:00:04] @JumpState,RUN_TEST_IDLE
+[11:00:04] @ShiftIR,8,0,ER2
+[11:00:04] @Set Odd Parity readback
+[11:00:04] @Set Odd Parity
+[11:00:04] @Set LA Start/Stop readback
+[11:00:04] @Set LA Start/Stop 
+[11:00:04] #Reveal IP Version = 1_6_042617
+[11:00:04] @Get Pattern
+[11:00:04] #pattern readout = a5a5
+[11:00:04] pattern readout passed!
+[11:00:04] @Get Tracy Signature
+[11:00:04] @Get Tracy Signature
+[11:00:04] #signature from core0 = 248294893
+[11:00:04] signature from core0 passed!
+[11:00:04] @Set Opcode Value
+[11:00:04] @Set Comp Value
+[11:00:04] @Set Mask Value
+[11:00:04] @Set Opcode Value
+[11:00:04] @Set Comp Value
+[11:00:04] @Set Mask Value
+[11:00:04] @Set Then Num
+[11:00:04] @Set NEXT THEN
+[11:00:04] @Set Cnt Cntg
+[11:00:04] @Set Event Count
+[11:00:04] @Set Then Num
+[11:00:04] @Set NEXT THEN
+[11:00:04] @Set Cnt Cntg
+[11:00:04] @Set Event Count
+[11:00:04] @Get BurstWrite CRC
+[11:00:04] @Set Truth Tbl Addr Cnter Init
+[11:00:04] @Set Truth Table Prog
+[11:00:04] Configuring in burst mode....
+[11:00:04] @Get BurstWrite CRC
+[11:00:04] @Enable TE Trig
+[11:00:04] @Enable Trig Output OR All readback
+[11:00:04] @Enable Trig Output OR All
+[11:00:04] @Set Pre-Trig Sample
+[11:00:04] @Set Post-Trig Sample
+[11:00:04] finished configuration of core0
+[11:00:04] Starting all active cores....
+[11:00:04] @ShiftIR,8,0,ER1
+[11:00:04] @ShiftDR,21,0,data (select active cores)
+[11:00:04] @ShiftIR,8,0,ER2
+[11:00:04] @Set LA Start cores
+[11:00:04] @UnlockCable
+[11:00:04] Running all active cores....
+[11:00:04] @LockCable
+[11:00:04] Polling trigger memory of core0....
+[11:00:04] @ShiftIR,8,0,ER1
+[11:00:04] @ShiftDR,21,0,data (select core0)
+[11:00:04] @ShiftIR,8,0,ER2
+[11:00:04] @Get Force Trigger bit
+[11:00:04] #TM_CTL_0=5
+[11:00:04] @Get Trig Detected Cnt
+[11:00:04] #numDetectedTriggers = 1
+[11:00:04] @Get Mem Block Full Cnt
+[11:00:04] #memFullCnt = 1
+[11:00:04] Downloading trigger memory of core0....
+[11:00:04] @Is LA Armed
+[11:00:04] @Set LA Start/Stop readback
+[11:00:04] @Set LA Start/Stop 
+[11:00:04] @Set LA Start/Stop readback
+[11:00:04] @Set LA Start/Stop 
+[11:00:04] @Get Trig Detected Cnt
+[11:00:04] #numDetectedTriggers = 1
+[11:00:04] @Get Mem Block Full Cnt
+[11:00:04] #memFullCnt = 1
+[11:00:04] @Get Last Addr Written
+[11:00:04] #lastAddrWritten = 480
+[11:00:04] @Get Multiple Trig Enbl
+[11:00:04] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[11:00:04] @Get BurstRead CRC
+[11:00:04] @Set Trace Mem Cnter Init
+[11:00:04] Uploading in burst mode....
+[11:00:04] @ShiftDR,49152,1,data (burst read)
+[11:00:04] @GetTDO,data,49152
+[11:00:04] @Get BurstRead CRC
+[11:00:04] @Get BurstRead CRC
+[11:00:04] @Get Pre-Trig Sample Num
+[11:00:04] @Get Post-Trig Sample Num
+[11:00:04] @Get Pre-Trig Samples Captured
+[11:00:04] @Get Trig Ptr
+[11:00:04] #trigPtr = 6
+[11:00:04] #dataSize=12, numRead=512, trace_out=481
+[11:00:04] #trig0={blockPosition:0,triggerPosition:1}
+[11:00:04] finished download trigger memory of core0
+[11:00:04] @UnlockCable
+[11:00:04] @ReleaseCablePort
+[11:00:04] @Disconnect
+[11:00:04] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[11:00:05] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[11:00:05] Connecting cableserver to run Reveal debugger....
+[11:00:05] @Connect
+[11:00:05] @SetSharableApplications,2,Reveal,Mico
+[11:00:06] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[11:00:06] @LockCable
+[11:00:06] @GetServerStatus
+[11:00:06] @Read
+[11:00:06] @SetTargetDevice,0
+[11:00:06] Connecting core0....
+[11:00:06] @ShiftIR,8,0,ER1
+[11:00:06] @ShiftDR,21,0,data (select core0)
+[11:00:06] @ShiftIR,8,0,ER2
+[11:00:06] Configuring core0....
+[11:00:06] @JumpState,RUN_TEST_IDLE
+[11:00:06] @JumpState,RUN_TEST_IDLE
+[11:00:06] @JumpState,RUN_TEST_IDLE
+[11:00:06] @ShiftIR,8,0,NOP
+[11:00:06] @JumpState,RUN_TEST_IDLE
+[11:00:06] @ShiftIR,8,0,ER2
+[11:00:06] @Set Odd Parity readback
+[11:00:06] @Set Odd Parity
+[11:00:06] @Set LA Start/Stop readback
+[11:00:06] @Set LA Start/Stop 
+[11:00:06] #Reveal IP Version = 1_6_042617
+[11:00:06] @Get Pattern
+[11:00:06] #pattern readout = a5a5
+[11:00:06] pattern readout passed!
+[11:00:06] @Get Tracy Signature
+[11:00:06] @Get Tracy Signature
+[11:00:06] #signature from core0 = 248294893
+[11:00:06] signature from core0 passed!
+[11:00:06] @Set Opcode Value
+[11:00:06] @Set Comp Value
+[11:00:06] @Set Mask Value
+[11:00:06] @Set Opcode Value
+[11:00:06] @Set Comp Value
+[11:00:06] @Set Mask Value
+[11:00:06] @Set Then Num
+[11:00:06] @Set NEXT THEN
+[11:00:06] @Set Cnt Cntg
+[11:00:06] @Set Event Count
+[11:00:06] @Set Then Num
+[11:00:06] @Set NEXT THEN
+[11:00:06] @Set Cnt Cntg
+[11:00:06] @Set Event Count
+[11:00:06] @Get BurstWrite CRC
+[11:00:06] @Set Truth Tbl Addr Cnter Init
+[11:00:06] @Set Truth Table Prog
+[11:00:06] Configuring in burst mode....
+[11:00:06] @Get BurstWrite CRC
+[11:00:06] @Enable TE Trig
+[11:00:06] @Enable Trig Output OR All readback
+[11:00:06] @Enable Trig Output OR All
+[11:00:06] @Set Pre-Trig Sample
+[11:00:06] @Set Post-Trig Sample
+[11:00:06] finished configuration of core0
+[11:00:06] Starting all active cores....
+[11:00:06] @ShiftIR,8,0,ER1
+[11:00:06] @ShiftDR,21,0,data (select active cores)
+[11:00:06] @ShiftIR,8,0,ER2
+[11:00:06] @Set LA Start cores
+[11:00:06] @UnlockCable
+[11:00:06] Running all active cores....
+[11:00:06] @LockCable
+[11:00:06] Polling trigger memory of core0....
+[11:00:06] @ShiftIR,8,0,ER1
+[11:00:06] @ShiftDR,21,0,data (select core0)
+[11:00:06] @ShiftIR,8,0,ER2
+[11:00:06] @Get Force Trigger bit
+[11:00:06] #TM_CTL_0=5
+[11:00:06] @Get Trig Detected Cnt
+[11:00:06] #numDetectedTriggers = 1
+[11:00:06] @Get Mem Block Full Cnt
+[11:00:06] #memFullCnt = 1
+[11:00:06] Downloading trigger memory of core0....
+[11:00:06] @Is LA Armed
+[11:00:06] @Set LA Start/Stop readback
+[11:00:06] @Set LA Start/Stop 
+[11:00:06] @Set LA Start/Stop readback
+[11:00:06] @Set LA Start/Stop 
+[11:00:06] @Get Trig Detected Cnt
+[11:00:06] #numDetectedTriggers = 1
+[11:00:06] @Get Mem Block Full Cnt
+[11:00:06] #memFullCnt = 1
+[11:00:06] @Get Last Addr Written
+[11:00:06] #lastAddrWritten = 480
+[11:00:06] @Get Multiple Trig Enbl
+[11:00:06] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[11:00:06] @Get BurstRead CRC
+[11:00:06] @Set Trace Mem Cnter Init
+[11:00:06] Uploading in burst mode....
+[11:00:06] @ShiftDR,49152,1,data (burst read)
+[11:00:06] @GetTDO,data,49152
+[11:00:06] @Get BurstRead CRC
+[11:00:06] @Get BurstRead CRC
+[11:00:06] @Get Pre-Trig Sample Num
+[11:00:06] @Get Post-Trig Sample Num
+[11:00:06] @Get Pre-Trig Samples Captured
+[11:00:06] @Get Trig Ptr
+[11:00:06] #trigPtr = 6
+[11:00:06] #dataSize=12, numRead=512, trace_out=481
+[11:00:06] #trig0={blockPosition:0,triggerPosition:1}
+[11:00:06] finished download trigger memory of core0
+[11:00:06] @UnlockCable
+[11:00:06] @ReleaseCablePort
+[11:00:06] @Disconnect
+[11:00:06] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[11:00:07] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[11:00:07] Connecting cableserver to run Reveal debugger....
+[11:00:07] @Connect
+[11:00:07] @SetSharableApplications,2,Reveal,Mico
+[11:00:07] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[11:00:07] @LockCable
+[11:00:07] @GetServerStatus
+[11:00:07] @Read
+[11:00:07] @SetTargetDevice,0
+[11:00:07] Connecting core0....
+[11:00:07] @ShiftIR,8,0,ER1
+[11:00:07] @ShiftDR,21,0,data (select core0)
+[11:00:07] @ShiftIR,8,0,ER2
+[11:00:07] Configuring core0....
+[11:00:07] @JumpState,RUN_TEST_IDLE
+[11:00:07] @JumpState,RUN_TEST_IDLE
+[11:00:07] @JumpState,RUN_TEST_IDLE
+[11:00:07] @ShiftIR,8,0,NOP
+[11:00:07] @JumpState,RUN_TEST_IDLE
+[11:00:07] @ShiftIR,8,0,ER2
+[11:00:07] @Set Odd Parity readback
+[11:00:07] @Set Odd Parity
+[11:00:07] @Set LA Start/Stop readback
+[11:00:07] @Set LA Start/Stop 
+[11:00:07] #Reveal IP Version = 1_6_042617
+[11:00:07] @Get Pattern
+[11:00:07] #pattern readout = a5a5
+[11:00:07] pattern readout passed!
+[11:00:07] @Get Tracy Signature
+[11:00:07] @Get Tracy Signature
+[11:00:07] #signature from core0 = 248294893
+[11:00:07] signature from core0 passed!
+[11:00:07] @Set Opcode Value
+[11:00:07] @Set Comp Value
+[11:00:07] @Set Mask Value
+[11:00:07] @Set Opcode Value
+[11:00:07] @Set Comp Value
+[11:00:07] @Set Mask Value
+[11:00:07] @Set Then Num
+[11:00:07] @Set NEXT THEN
+[11:00:07] @Set Cnt Cntg
+[11:00:07] @Set Event Count
+[11:00:07] @Set Then Num
+[11:00:07] @Set NEXT THEN
+[11:00:07] @Set Cnt Cntg
+[11:00:07] @Set Event Count
+[11:00:07] @Get BurstWrite CRC
+[11:00:07] @Set Truth Tbl Addr Cnter Init
+[11:00:07] @Set Truth Table Prog
+[11:00:07] Configuring in burst mode....
+[11:00:07] @Get BurstWrite CRC
+[11:00:07] @Enable TE Trig
+[11:00:07] @Enable Trig Output OR All readback
+[11:00:07] @Enable Trig Output OR All
+[11:00:07] @Set Pre-Trig Sample
+[11:00:07] @Set Post-Trig Sample
+[11:00:07] finished configuration of core0
+[11:00:07] Starting all active cores....
+[11:00:07] @ShiftIR,8,0,ER1
+[11:00:07] @ShiftDR,21,0,data (select active cores)
+[11:00:07] @ShiftIR,8,0,ER2
+[11:00:07] @Set LA Start cores
+[11:00:07] @UnlockCable
+[11:00:07] Running all active cores....
+[11:00:07] @LockCable
+[11:00:07] Polling trigger memory of core0....
+[11:00:07] @ShiftIR,8,0,ER1
+[11:00:07] @ShiftDR,21,0,data (select core0)
+[11:00:07] @ShiftIR,8,0,ER2
+[11:00:07] @Get Force Trigger bit
+[11:00:07] #TM_CTL_0=5
+[11:00:07] @Get Trig Detected Cnt
+[11:00:07] #numDetectedTriggers = 1
+[11:00:07] @Get Mem Block Full Cnt
+[11:00:07] #memFullCnt = 1
+[11:00:07] Downloading trigger memory of core0....
+[11:00:07] @Is LA Armed
+[11:00:07] @Set LA Start/Stop readback
+[11:00:07] @Set LA Start/Stop 
+[11:00:07] @Set LA Start/Stop readback
+[11:00:07] @Set LA Start/Stop 
+[11:00:07] @Get Trig Detected Cnt
+[11:00:07] #numDetectedTriggers = 1
+[11:00:07] @Get Mem Block Full Cnt
+[11:00:07] #memFullCnt = 1
+[11:00:07] @Get Last Addr Written
+[11:00:07] #lastAddrWritten = 480
+[11:00:07] @Get Multiple Trig Enbl
+[11:00:07] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[11:00:07] @Get BurstRead CRC
+[11:00:07] @Set Trace Mem Cnter Init
+[11:00:07] Uploading in burst mode....
+[11:00:07] @ShiftDR,49152,1,data (burst read)
+[11:00:07] @GetTDO,data,49152
+[11:00:07] @Get BurstRead CRC
+[11:00:07] @Get BurstRead CRC
+[11:00:07] @Get Pre-Trig Sample Num
+[11:00:07] @Get Post-Trig Sample Num
+[11:00:07] @Get Pre-Trig Samples Captured
+[11:00:07] @Get Trig Ptr
+[11:00:07] #trigPtr = 6
+[11:00:07] #dataSize=12, numRead=512, trace_out=481
+[11:00:07] #trig0={blockPosition:0,triggerPosition:1}
+[11:00:07] finished download trigger memory of core0
+[11:00:07] @UnlockCable
+[11:00:07] @ReleaseCablePort
+[11:00:07] @Disconnect
+[11:00:07] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+[11:00:28] runProject on device [1. LCMXO2-2000HC] using C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.rva [Reveal.rvl]
+[11:00:28] Connecting cableserver to run Reveal debugger....
+[11:00:28] @Connect
+[11:00:28] @SetSharableApplications,2,Reveal,Mico
+[11:00:29] @SetCablePort,USB,EzUSB-0,8,0,0,1,1,0,0,0,1
+[11:00:29] @LockCable
+[11:00:29] @GetServerStatus
+[11:00:29] @Read
+[11:00:29] @SetTargetDevice,0
+[11:00:29] Connecting core0....
+[11:00:29] @ShiftIR,8,0,ER1
+[11:00:29] @ShiftDR,21,0,data (select core0)
+[11:00:29] @ShiftIR,8,0,ER2
+[11:00:29] Configuring core0....
+[11:00:29] @JumpState,RUN_TEST_IDLE
+[11:00:29] @JumpState,RUN_TEST_IDLE
+[11:00:29] @JumpState,RUN_TEST_IDLE
+[11:00:29] @ShiftIR,8,0,NOP
+[11:00:29] @JumpState,RUN_TEST_IDLE
+[11:00:29] @ShiftIR,8,0,ER2
+[11:00:29] @Set Odd Parity readback
+[11:00:29] @Set Odd Parity
+[11:00:29] @Set LA Start/Stop readback
+[11:00:29] @Set LA Start/Stop 
+[11:00:29] #Reveal IP Version = 1_6_042617
+[11:00:29] @Get Pattern
+[11:00:29] #pattern readout = a5a5
+[11:00:29] pattern readout passed!
+[11:00:29] @Get Tracy Signature
+[11:00:29] @Get Tracy Signature
+[11:00:29] #signature from core0 = 248294893
+[11:00:29] signature from core0 passed!
+[11:00:29] @Set Opcode Value
+[11:00:29] @Set Comp Value
+[11:00:29] @Set Mask Value
+[11:00:29] @Set Opcode Value
+[11:00:29] @Set Comp Value
+[11:00:29] @Set Mask Value
+[11:00:29] @Set Then Num
+[11:00:29] @Set NEXT THEN
+[11:00:29] @Set Cnt Cntg
+[11:00:29] @Set Event Count
+[11:00:29] @Set Then Num
+[11:00:29] @Set NEXT THEN
+[11:00:29] @Set Cnt Cntg
+[11:00:29] @Set Event Count
+[11:00:29] @Get BurstWrite CRC
+[11:00:29] @Set Truth Tbl Addr Cnter Init
+[11:00:29] @Set Truth Table Prog
+[11:00:29] Configuring in burst mode....
+[11:00:29] @Get BurstWrite CRC
+[11:00:29] @Enable TE Trig
+[11:00:29] @Enable Trig Output OR All readback
+[11:00:29] @Enable Trig Output OR All
+[11:00:29] @Set Pre-Trig Sample
+[11:00:29] @Set Post-Trig Sample
+[11:00:29] finished configuration of core0
+[11:00:29] Starting all active cores....
+[11:00:29] @ShiftIR,8,0,ER1
+[11:00:29] @ShiftDR,21,0,data (select active cores)
+[11:00:29] @ShiftIR,8,0,ER2
+[11:00:29] @Set LA Start cores
+[11:00:29] @UnlockCable
+[11:00:29] Running all active cores....
+[11:00:29] @LockCable
+[11:00:29] Polling trigger memory of core0....
+[11:00:29] @ShiftIR,8,0,ER1
+[11:00:29] @ShiftDR,21,0,data (select core0)
+[11:00:29] @ShiftIR,8,0,ER2
+[11:00:29] @Get Force Trigger bit
+[11:00:29] #TM_CTL_0=5
+[11:00:29] @Get Trig Detected Cnt
+[11:00:29] #numDetectedTriggers = 1
+[11:00:29] @Get Mem Block Full Cnt
+[11:00:29] #memFullCnt = 1
+[11:00:29] Downloading trigger memory of core0....
+[11:00:29] @Is LA Armed
+[11:00:29] @Set LA Start/Stop readback
+[11:00:29] @Set LA Start/Stop 
+[11:00:29] @Set LA Start/Stop readback
+[11:00:29] @Set LA Start/Stop 
+[11:00:29] @Get Trig Detected Cnt
+[11:00:29] #numDetectedTriggers = 1
+[11:00:29] @Get Mem Block Full Cnt
+[11:00:29] #memFullCnt = 1
+[11:00:29] @Get Last Addr Written
+[11:00:29] #lastAddrWritten = 480
+[11:00:29] @Get Multiple Trig Enbl
+[11:00:29] #traceWidth=96, userSelectedTriggers=1, numTrigEnable=1
+[11:00:29] @Get BurstRead CRC
+[11:00:29] @Set Trace Mem Cnter Init
+[11:00:29] Uploading in burst mode....
+[11:00:29] @ShiftDR,49152,1,data (burst read)
+[11:00:29] @GetTDO,data,49152
+[11:00:29] @Get BurstRead CRC
+[11:00:29] @Get BurstRead CRC
+[11:00:29] @Get Pre-Trig Sample Num
+[11:00:29] @Get Post-Trig Sample Num
+[11:00:29] @Get Pre-Trig Samples Captured
+[11:00:29] @Get Trig Ptr
+[11:00:29] #trigPtr = 6
+[11:00:29] #dataSize=12, numRead=512, trace_out=481
+[11:00:29] #trig0={blockPosition:0,triggerPosition:1}
+[11:00:29] finished download trigger memory of core0
+[11:00:29] @UnlockCable
+[11:00:29] @ReleaseCablePort
+[11:00:29] @Disconnect
+[11:00:29] All messages logged in file C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_debug.log
+Last closed: 周三 十一月 6 11:01:23 2019

@@ -1,0 +1,114 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/Administrator/Desktop/lattice_item/lattice_item_v2/Reveal.rvl" Date="2019-11-08">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="FPGA_DSP"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="248548889" Name="top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="PLL_75M_M/CLKOP" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="512"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Bus Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg">
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:0"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:1"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:2"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:3"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:4"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:5"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:6"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:7"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:8"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:9"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:10"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:11"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:12"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:13"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:14"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:15"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:16"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:17"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:18"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:19"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:20"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:21"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:22"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:23"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:24"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:25"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:26"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:27"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:28"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:29"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:30"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:31"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:32"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:33"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:34"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:35"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:36"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:37"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:38"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:39"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:40"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:41"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:42"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:43"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:44"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:45"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:46"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:47"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:48"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:49"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:50"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:51"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:52"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:53"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:54"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:55"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:56"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:57"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:58"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:59"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:60"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:61"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:62"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:63"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:64"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:65"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:66"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:67"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:68"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:69"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:70"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:71"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:72"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:73"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:74"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:75"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:76"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:77"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:78"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:79"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:80"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:81"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:82"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:83"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:84"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:85"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:86"/>
+                    <Sig Type="SIG" Name="SMART_ABS_M/RS485_COM_M/RX_DATA_reg:87"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig=""/>
+                <TU Serialbits="0" Type="0" ID="2" Sig=""/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="2" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

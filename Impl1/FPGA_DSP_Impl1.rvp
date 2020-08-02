@@ -1,0 +1,44 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = LCMXO2-2000HC-4TG100C
+family = MachXO2
+device = LCMXO2-2000HC
+speed = 4
+package = TQFP100
+operation = Commercial
+
+#design options
+[Design]
+title = FPGA_DSP
+path = C:/Users/Administrator/Desktop/lattice_item/Impl1
+core_generate = C:/Users/Administrator/Desktop/lattice_item/Impl1
+search_path = C:/Users/Administrator/Desktop/lattice_item
+top = top
+lpf = C:/Users/Administrator/Desktop/lattice_item/FPGA_DSP.lpf
+synthesis = lse
+
+#strategy options
+VHDL2008 = false
+
+#HDLs options
+[HDLs]
+C:/Users/Administrator/Desktop/lattice_item/src/top.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/key_check.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/smg_scan.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/smart_abs.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/rs485_com.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/ipcore/PLL_75M.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/encoder_check.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/out_pulse_check.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/abz_phase.v = Verilog
+C:/Users/Administrator/Desktop/lattice_item/src/crc_8.v = Verilog
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_workspace/tmpreveal/top_la0_trig_gen.v=Verilog
+C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_workspace/tmpreveal/top_la0_gen.v=Verilog
+C:/Users/Administrator/Desktop/lattice_item/Impl1/reveal_workspace/tmpreveal/top_rvl.v=Verilog,work

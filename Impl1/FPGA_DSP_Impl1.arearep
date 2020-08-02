@@ -1,0 +1,130 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  394 of 2352 (16.752%)
+I/O cells:      55
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         8          100.0
+                              CCU2D        62          100.0
+                            FD1P3AX       179          100.0
+                            FD1P3AY        13          100.0
+                            FD1P3IX       107          100.0
+                            FD1S3AX        22          100.0
+                            FD1S3AY         5          100.0
+                            FD1S3IX        68          100.0
+                                GSR         1          100.0
+                                 IB        24          100.0
+                            L6MUX21         1          100.0
+                               LUT4       483          100.0
+                                 OB        23          100.0
+                              PFUMX        43          100.0
+SUB MODULES
+                              crc_8         1
+                            dsp_com         1
+                      encoder_check         1
+                          key_check         1
+                    out_pulse_check         1
+                          rs485_com         1
+                          smart_abs         1
+                           smg_scan         1
+                              TOTAL      1047
+----------------------------------------------------------------------
+Report for cell out_pulse_check.v1
+Instance Path : OUT_PULSE_CHECK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            8.1
+                            FD1P3AX        10            5.6
+                            FD1S3AX         6           27.3
+                            FD1S3AY         1           20.0
+                               LUT4        16            3.3
+                              PFUMX         1            2.3
+                              TOTAL        39
+----------------------------------------------------------------------
+Report for cell encoder_check.v1
+Instance Path : ENCODER_CHECK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         8           36.4
+                               LUT4         1            0.2
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell dsp_com.v1
+Instance Path : DSP_COM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        15           24.2
+                            FD1P3AX        56           31.3
+                            FD1P3AY         4           30.8
+                            FD1S3AX         6           27.3
+                            FD1S3AY         2           40.0
+                            FD1S3IX        28           41.2
+                            L6MUX21         1          100.0
+                               LUT4       161           33.3
+                              PFUMX        29           67.4
+                              TOTAL       302
+----------------------------------------------------------------------
+Report for cell smart_abs.v1
+Instance Path : SMART_ABS
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        20           32.3
+                            FD1P3AX        96           53.6
+                            FD1P3AY         1            7.7
+                            FD1P3IX       104           97.2
+                            FD1S3AX         1            4.5
+                            FD1S3AY         2           40.0
+                               LUT4       234           48.4
+                              PFUMX         5           11.6
+SUB MODULES
+                              crc_8         1
+                          rs485_com         1
+                              TOTAL       465
+----------------------------------------------------------------------
+Report for cell rs485_com.v1
+Instance Path : SMART_ABS.RS485_COM_M
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        20           32.3
+                            FD1P3AX        96           53.6
+                            FD1P3AY         1            7.7
+                            FD1P3IX       104           97.2
+                            FD1S3AX         1            4.5
+                            FD1S3AY         2           40.0
+                               LUT4       234           48.4
+                              PFUMX         5           11.6
+SUB MODULES
+                              crc_8         1
+                              TOTAL       464
+----------------------------------------------------------------------
+Report for cell crc_8.v1
+Instance Path : SMART_ABS.RS485_COM_M.u_crc
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         8            4.5
+                               LUT4        24            5.0
+                              TOTAL        32
+----------------------------------------------------------------------
+Report for cell smg_scan.v1
+Instance Path : SMG_SCAN
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        11           17.7
+                            FD1P3AX        13            7.3
+                            FD1P3IX         3            2.8
+                            FD1S3AX         1            4.5
+                            FD1S3IX        20           29.4
+                               LUT4        47            9.7
+                              PFUMX         8           18.6
+                              TOTAL       103
+----------------------------------------------------------------------
+Report for cell key_check.v1
+Instance Path : KEY_CHECK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        11           17.7
+                            FD1P3AX         4            2.2
+                            FD1P3AY         8           61.5
+                            FD1S3IX        20           29.4
+                               LUT4        16            3.3
+                              TOTAL        59
